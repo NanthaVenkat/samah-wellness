@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -8,7 +7,6 @@ const Button = ({
   href,
   onClick,
 
-  primary = false,
   secondary = false,
   brownishPink = false,
   outline = false,
