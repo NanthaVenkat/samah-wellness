@@ -156,49 +156,7 @@ input {
   color: var(--olive);
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  min-height: 3rem;
-  padding: 0.85rem 1.4rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
-  font-family: Arial, sans-serif;
-  font-size: 0.96rem;
-  font-weight: 600;
-}
-
-.button:hover {
-  box-shadow: 0 12px 30px rgba(52, 35, 15, 0.14);
-}
-
-.button--ghost {
-  border-color: rgba(61, 64, 25, 0.25);
-  background: transparent;
-}
-
-.button--blush {
-  background: var(--blush);
-  color: var(--white);
-}
-
-.button--primary {
-  background: var(--brown);
-  color: var(--white);
-}
-
-.button--olive {
-  background: var(--olive-soft);
-  color: var(--white);
-}
-
-.button--light {
-  background: var(--white);
-  color: var(--olive);
-}
+/* Button styles replaced with Tailwind utilities in components */
 
 .hero-section {
   padding: 0;

@@ -48,7 +48,13 @@ function HeroForm({ ctaLabel = "Book a discovery call" }) {
         <input placeholder="Email" />
         <input placeholder="What are you seeking support for?" />
       </div>
-      <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className="button button--primary">
+      <motion.button
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        className={
+          "inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-[#7d3f0f] text-white transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]"
+        }
+      >
         {ctaLabel}
         <ArrowRight size={16} />
       </motion.button>
@@ -150,7 +156,10 @@ function HomeSections({ page }) {
                 </div>
               ))}
             </div>
-            <a href="#events" className="button button--olive">
+            <a
+              href="#events"
+              className="inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-[#999245] text-white transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]"
+            >
               Explore what&apos;s new
               <ArrowRight size={16} />
             </a>
@@ -219,7 +228,10 @@ function HomeSections({ page }) {
                 </div>
               ))}
             </div>
-            <a href="#contact" className="button button--primary">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-[#7d3f0f] text-white transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]"
+            >
               Book a 15-minute call
               <ArrowRight size={16} />
             </a>
@@ -257,7 +269,10 @@ function HomeSections({ page }) {
           <MotionReveal className="founder-banner__copy">
             <h2>From our founder</h2>
             <p>Born from lived experience, Samah is the kind of space we once searched for and then chose to build.</p>
-            <a href="#contact" className="button button--primary">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-[#7d3f0f] text-white transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]"
+            >
               Begin your journey
               <ArrowRight size={16} />
             </a>
@@ -457,7 +472,7 @@ function MembershipSections({ page }) {
               <input placeholder="Email" />
               <input placeholder="Membership requirements" />
             </div>
-            <button className="button button--light">
+            <button className="inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-white text-[#3d4019] transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]">
               Submit
               <ArrowRight size={16} />
             </button>

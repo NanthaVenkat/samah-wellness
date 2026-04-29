@@ -44,11 +44,25 @@ function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <motion.a whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} href="#login" className="button button--ghost">
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="#login"
+              className={
+                "inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-[rgba(61,64,25,0.25)] bg-transparent text-[#3d4019] transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]"
+              }
+            >
               <User size={15} />
               Log In
             </motion.a>
-            <motion.a whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} href="#contact" className="button button--blush">
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="#contact"
+              className={
+                "inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-[#c98b8c] text-white transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]"
+              }
+            >
               Book a Consultation
             </motion.a>
           </div>
@@ -83,7 +97,7 @@ function Footer() {
             <span>Email Address</span>
             <input type="email" placeholder="Enter your email" />
           </label>
-          <button className="button button--olive">
+          <button className="inline-flex items-center justify-center gap-2 min-h-[3rem] px-6 rounded-full border border-transparent bg-[#999245] text-white transition-transform duration-200 font-sans text-[0.96rem] font-semibold hover:shadow-[0_12px_30px_rgba(52,35,15,0.14)]">
             Subscribe
             <ArrowRight size={16} />
           </button>
