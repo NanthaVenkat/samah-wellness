@@ -1,6 +1,13 @@
-import PageBuilder from "../components/PageBuilder";
-import { homePage } from "../data/siteContent";
+import HeroSection from "../components/Home/HeroSection";
+import HomeAbout from "../components/Home/HomeAbout";
 
-export default function HomePage() {
-  return <PageBuilder page={homePage} />;
+function HomePage() {
+    return (
+        <>
+            <HeroSection />
+            <HomeAbout />
+        </>
+    )
 }
+
+export default HomePage;
