@@ -2,8 +2,8 @@ import whatSamah1 from "../../assets/images/what-samah.webp"
 
 export default function HomeAbout() {
     return (
-        <section className="py-10 bg-[#3A391B]">
-            <div class="container mx-auto">
+        <section className="py-20 bg-[#3A391B]">
+            <div class="container mx-auto px-4 xl:px-8">
                 <h2 class="text-title text-[#8A8341]">WHAT SAMAH IS</h2>
                 <h1 className="text-title-xl text-white max-w-[560px] mx-auto">Wellness, brought back into harmony.</h1>
 
@@ -37,9 +37,9 @@ export default function HomeAbout() {
                     </div>
                 </div>
 
-                <div class="rounded-xl p-7 grid grid-cols-1 lg:grid-cols-[60%_40%] mt-5 bg-[#D5CFBA]">
-                    <div className=" text-[#3A391B]">
-                        <h1 className="font-albertus text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)]"><i className="font-roundhand">Introducing Samah Wellness House,</i> a Communal House for Holistic Well-being.</h1>
+                <div class="rounded-xl p-7 grid grid-cols-1 lg:grid-cols-[60%_40%] gap-5 mt-5 bg-[#D5CFBA]">
+                    <div className="flex flex-col justify-center text-[#3A391B]">
+                        <h1 className="font-albertus text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight"><i className="font-roundhand">Introducing Samah Wellness House,</i> <br /> a Communal House for Holistic Well-being.</h1>
 
                         <p className="font-montserrat font-medium text-[clamp(0.85rem,0.98rem+0.2vw,3.125rem)]">A science‑aware, deeply personalised wellness ecosystem.</p>
                     </div>
