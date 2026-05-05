@@ -22,16 +22,16 @@ const Button = ({
 }) => {
   const variantStyles = {
     primary: {
-      solid: "bg-[#68320A] text-white border-[#68320A]",
-      outline: "border-[#68320A] text-[#68320A] bg-transparent",
+      solid: "bg-brown text-white border-brown",
+      outline: "border-brown text-brown bg-transparent",
     },
     secondary: {
-      solid: "bg-[#8A8341] text-white border-[#8A8341]",
-      outline: "border-[#8A8341] text-[#8A8341] bg-transparent",
+      solid: "bg-olive-soft text-white border-olive-soft",
+      outline: "border-olive-soft text-olive-soft bg-transparent",
     },
     brownishPink: {
-      solid: "bg-[#BF7F81] text-white border-[#BF7F81]",
-      outline: "border-[#BF7F81] text-[#BF7F81] bg-transparent",
+      solid: "bg-blush text-white border-blush",
+      outline: "border-blush text-blush bg-transparent",
     },
   };
 
@@ -43,17 +43,17 @@ const Button = ({
   const styleType = outline ? "outline" : "solid";
 
   const baseClasses =
-    "inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold border transition-all duration-200";
+    "inline-flex items-center justify-center gap-2 px-6 py-3 font-sans font-semibold border transition-all duration-500 ease-relaxed";
 
   const finalClass = twMerge(
     clsx(
       baseClasses,
       variantStyles[activeVariant][styleType],
-      rounded ? "rounded-full" : "rounded-md",
+      rounded ? "rounded-full" : "rounded-xl",
       fullWidth && "w-full",
       disabled
         ? "opacity-50 cursor-not-allowed"
-        : "cursor-pointer hover:opacity-90",
+        : "cursor-pointer hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] hover:shadow-brand-hover",
       className
     )
   );
@@ -67,10 +67,17 @@ const Button = ({
   );
 
   if (href) {
+    if (href.startsWith("/")) {
+      return (
+        <Link to={href} className={finalClass}>
+          {content}
+        </Link>
+      );
+    }
     return (
-      <Link to={href} className={finalClass}>
+      <a href={href} className={finalClass}>
         {content}
-      </Link>
+      </a>
     );
   }
 
