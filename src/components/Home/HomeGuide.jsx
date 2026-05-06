@@ -5,13 +5,13 @@ export default function HomeGuide() {
                 <div className="container px-4 xl:px-8 mx-auto">
                     <div className="max-w-[680px] text-center mx-auto">
                         <h2 className="text-title text-[#8A8341]">THE PHILOSOPHY OF WA</h2>
-                        <h1 className="text-title-xl text-[#68320A] max-w-[560px] mx-auto mb-4">Guided by Wa (和)</h1>
+                        <h1 className="text-title-xl text-[#68320A] max-w-[560px] mx-auto">Guided by Wa (和)</h1>
                         <p className="text-[#1F1D1D] text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] font-medium font-montserrat">
                             At the heart of Samah lies Wa — the quiet harmony of balance. A reminder that wellbeing is not found in extremes, but in right relationship— between effort and ease, strength and softness, self and community.
                         </p>
                     </div>
 
-                    <div className="mt-8 gap-y-8 md:gap-y-0 flex flex-wrap md:flex-nowrap">
+                    <div className="mt-12 gap-y-8 md:gap-y-0 flex flex-wrap md:flex-nowrap">
                         {/* First Image */}
                         <div className="inline-block w-full sm:w-1/2 md:w-1/4 min-h-[220px] overflow-hidden px-2">
                             <img src="src/assets/images/holistic.webp" alt="" className="w-full h-full object-cover rounded-xl" />

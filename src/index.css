@@ -97,7 +97,7 @@ html {
   }
 
   .text-title-xl {
-    @apply text-[clamp(1.85rem,1.25rem+1.2vw,3.125rem)] text-center font-light;
+    @apply text-[clamp(1.85rem,1.25rem+1.2vw,3.125rem)] text-center font-light mb-4;
   }
 }
 
@@ -110,4 +110,15 @@ body {
 .text-title,
 .text-title-xl {
   font-family: 'Albertus', serif;
+}
+
+.workshop-slider [class*='swiper-button'] {
+  background-color: rgba(0, 0, 0, 0.671);
+  border-radius: 100%;
+}
+
+.workshop-slider [class*='swiper-button'] svg {
+  fill: #fff;
+  color: #fff;
+  width: 10px;
 }

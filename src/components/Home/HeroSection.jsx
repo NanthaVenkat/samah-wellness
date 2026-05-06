@@ -16,7 +16,6 @@ export default function HeroSection() {
                             <p className="font-montserrat text-[#3A391B] font-medium">Tell us what your body has been experiencing, and our team will guide you toward the right next step.</p>
                         </div>
 
-
                         <input type="text" placholder="Your Name" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full placeholder:text-[#3A391B50] outline-0" />
 
                         <input type="number" placholder="Your Name" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full placeholder:text-[#3A391B50] outline-0" />
