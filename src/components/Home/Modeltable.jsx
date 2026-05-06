@@ -56,7 +56,7 @@ export default function ModelTable() {
                             <tbody className="z-[2] relative text-[#3A391B]">
                                 {tableDatas.map((tableData, index) => (
                                     <tr key={index} className="relative">
-                                        <td className="p-5 w-2/4">{tableData.aspect}</td>
+                                        <td className="p-5 min-w-2xs w-2/4">{tableData.aspect}</td>
                                         <td className="p-5 w-1/4 text-[#1F1D1D]">{tableData.samah ? <Check className="mx-auto" /> : ''}</td>
                                         <td className="p-5 w-1/4">{tableData.treditionalCare}</td>
                                     </tr>
