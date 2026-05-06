@@ -1,4 +1,8 @@
-import { Check } from "lucide-react";
+import { Check, ArrowRight, Quote } from "lucide-react";
+import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import { Navigation } from 'swiper/modules'
 
 const tableDatas = [
     {
@@ -33,6 +37,21 @@ const tableDatas = [
     },
 ]
 
+const founderSlider = [
+    {
+        image: 'src/assets/images/founded.png',
+        title: 'From our Founder',
+        phara: 'Born from lived experiences,<br/> Samah is a space we once searched for— and chose to create.',
+        link: '/about',
+    },
+    {
+        image: 'src/assets/images/founded.png',
+        title: 'From our Founder',
+        phara: 'Born from lived experiences,<br/> Samah is a space we once searched for— and chose to create.',
+        link: '/about',
+    },
+]
+
 export default function ModelTable() {
     return (
         <>
@@ -63,6 +82,76 @@ export default function ModelTable() {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-20 px-4">
+                <div class="container mx-auto">
+                    <Swiper
+                        modules={[Navigation]}
+                        navigation={true}
+
+                        className="founder-slider"
+                    >
+                        {founderSlider.map((founderSlide, index) => (
+                            <SwiperSlide>
+                                <div key={index} class="bg-[#D5CFBA] rounded-xl">
+                                    <div class="grid sm:grid-cols-2">
+                                        <div className="p-12">
+                                            <img src={founderSlide.image} alt="" className="rounded-xl" />
+                                        </div>
+                                        <div class="flex flex-col p-12 font-montserrat">
+                                            <div>
+                                                <h1 className="text-title-xl !text-left text-[#68320A]">From our Founder</h1>
+                                                <p className="text-[#3A391B] text-[clamp(1.3rem,0.98rem+0.2vw,1.125rem)] font-medium" dangerouslySetInnerHTML={{ __html: founderSlide.phara }} />
+                                            </div>
+
+                                            <Link to={founderSlide.link} className="flex items-center gap-3 text-[clamp(1.3rem,0.98rem+0.2vw,1.125rem)] rounded-full bg-[#68320A] text-white px-5 py-2 w-max mt-auto">Begin Your Journey <ArrowRight width={20} /></Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </section>
+
+            <section className="py-20 px-4">
+                <div class="container mx-auto">
+
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <p className="flex items-center text-[#3A391B] gap-3 mb-12 font-medium font-montserrat text-2xl"><img src="src/assets/images/reviwers.png" alt="" className="h-[50px]" />Clients Feedback</p>
+                            <h1 className="text-title-xl !text-left text-[#68320A]">What Our Community Is Experiencing</h1>
+                            <p className="text-[#3A391B] text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] font-medium font-montserrat">
+                                Samah was envisioned as a space where movement, recovery, emotional wellbeing and community could exist under one thoughtful roof.
+                            </p>
+                        </div>
+
+                        <div>
+                            <Swiper
+                                modules={[Navigation]}
+                                navigation={true}
+                                spaceBetween={30}
+
+                                className="review-slider"
+                            >
+                                {founderSlider.map((founderSlide, index) => (
+                                    <SwiperSlide key={index} className="bg-[#CAD8D8] rounded-xl p-8 text-center">
+                                        <div className="max-w-[520px] mx-auto my-12">
+                                            <Quote className="text-red mx-auto mb-8" />
+                                            <h4 className="text-3xl mb-8 font-light">“For the first time, my body feels supported instead of pushed.”</h4>
+
+                                            <div className="text-center space-y-1.5">
+                                                <p className="text-3xl">Sophia Loren</p>
+                                                <p className="font-montserrat font-medium">Coimbatore</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </section>

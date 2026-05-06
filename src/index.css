@@ -112,12 +112,18 @@ body {
   font-family: 'Albertus', serif;
 }
 
-.workshop-slider [class*='swiper-button'] {
+.workshop-slider [class*='swiper-button'],
+.founder-slider [class*='swiper-button'],
+.review-slider [class*='swiper-button'] {
   background-color: rgba(0, 0, 0, 0.671);
   border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
 
-.workshop-slider [class*='swiper-button'] svg {
+.workshop-slider [class*='swiper-button'] svg,
+.founder-slider [class*='swiper-button'] svg,
+.review-slider [class*='swiper-button'] svg {
   fill: #fff;
   color: #fff;
   width: 10px;
