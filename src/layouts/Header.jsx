@@ -7,7 +7,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="site-header border-b border-[#3A391B80] p-2 relative z-50 bg-white">
+    <header className="site-header border-b border-[#3A391B80] p-2 relative z-50 bg-white font-montserrat font-medium">
       <nav className="container flex items-center mx-auto py-3 font-montserrat font-medium">
 
         {/* Logo */}
@@ -16,7 +16,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-5 text-[#323C26]">
+        <ul className="hidden xl:flex items-center gap-5 text-[#323C26]">
           <li><Link>About</Link></li>
           <li>
             <Link className="flex items-center gap-1">
@@ -30,7 +30,7 @@ export default function Header() {
         </ul>
 
         {/* Desktop Right */}
-        <ul className="hidden md:flex items-center gap-5 ml-auto text-[#323C26]">
+        <ul className="hidden lg:flex items-center gap-5 ml-auto text-[#323C26]">
           <li>
             <Link className="flex items-center gap-1 py-2 px-4 border border-[#3A391B] rounded-full">
               <UserRound fill="#3A391B" stroke={0} />
@@ -48,7 +48,7 @@ export default function Header() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-[#323C26]"
+          className="xl:hidden text-[#323C26] ml-auto"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
