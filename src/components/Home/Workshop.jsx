@@ -35,7 +35,7 @@ export default function Workshop() {
 
                     <Swiper
                         modules={[Navigation]}
-                        navigation={true} // Corrected: lower case 'n' and boolean
+                        navigation={true}
                         spaceBetween={30}
                         slidesPerView={1}
                         breakpoints={{
