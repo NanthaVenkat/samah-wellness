@@ -100,7 +100,7 @@ export default function Workshop() {
                             <SwiperSlide key={index}>
                                 {/* Added 'flex' to this div so h-full works on the inner child */}
                                 <div className="relative rounded-lg overflow-hidden bg-white group">
-                                    <img src="src/src/assets/images/Memberships.png" alt="membership" className='h-[380px] w-full object-center object-cover transition-transform duration-700 ease-out group-hover:scale-110' />
+                                    <img src="/src/assets/images/Memberships.png" alt="membership" className='h-[380px] w-full object-center object-cover transition-transform duration-700 ease-out group-hover:scale-110' />
                                     <div className='text-center font-montserrat space-y-3 p-5 text-[#3A391B]'>
                                         <h4 className='text-xl font-albert'>{item.title}</h4>
                                         <p className='font-medium'>{item.phara}</p>
