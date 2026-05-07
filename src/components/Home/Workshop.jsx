@@ -4,6 +4,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { Calendar, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import BubbleButton from '../BubbleButton';
 
 const workshopSlider = [
     { image: 'src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
@@ -47,12 +49,11 @@ export default function Workshop() {
                         {workshopSlider.map((item, index) => (
                             <SwiperSlide key={index}>
                                 {/* Added 'flex' to this div so h-full works on the inner child */}
-                                <div className="relative overflow-hidden flex h-[460px] z-[2] bg-[url('src/assets/images/holistic.webp')] bg-center bg-cover p-5 rounded-lg
-                                            after:content-[''] after:absolute after:inset-0 after:z-[1] 
-                                            after:bg-gradient-to-b after:from-transparent after:to-black after:opacity-50 after:from-[50%] after:to-[100%]">
+                                <div className="relative overflow-hidden flex h-[460px] z-[2] group rounded-lg">
+                                    <div className="absolute inset-0 z-0 bg-[url('src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"></div>
+                                    <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black opacity-50 from-[50%] to-[100%] pointer-events-none"></div>
+                                    <div className="relative z-[2] w-full p-5 flex flex-col justify-between">
 
-                                    {/* h-full now works because parent is flex */}
-                                    <div className='relative z-[5] flex flex-col justify-between w-full h-full'>
                                         <div>
                                             <p className='bg-[#68320A] font-montserrat font-medium rounded-full py-2 px-4 text-white inline-block w-max text-sm'>
                                                 {item.type}
@@ -98,12 +99,14 @@ export default function Workshop() {
                         {indulgeSlider.map((item, index) => (
                             <SwiperSlide key={index}>
                                 {/* Added 'flex' to this div so h-full works on the inner child */}
-                                <div className="relative rounded-lg overflow-hidden bg-white">
-                                    <img src="src/assets/images/Memberships.png" alt="membership" className='h-[380px] object-center object-cover' />
+                                <div className="relative rounded-lg overflow-hidden bg-white group">
+                                    <img src="src/assets/images/Memberships.png" alt="membership" className='h-[380px] w-full object-center object-cover transition-transform duration-700 ease-out group-hover:scale-110' />
                                     <div className='text-center font-montserrat space-y-3 p-5 text-[#3A391B]'>
                                         <h4 className='text-xl font-albert'>{item.title}</h4>
                                         <p className='font-medium'>{item.phara}</p>
-                                        <Link to='/about' className='border-[#68320A] font-medium text-[#68320A] border-b pb-1'>Explore More <ArrowRight className='inline-block w-[20px]' /></Link>
+                                        <BubbleButton to='/about' className='border-[#68320A] font-medium text-[#68320A] border-b pb-1 inline-block w-max mx-auto md:mx-0' bubbleColor="bg-[#68320A]/10">
+                                            Explore More <ArrowRight className='inline-block w-[20px]' />
+                                        </BubbleButton>
                                     </div>
                                 </div>
                             </SwiperSlide>

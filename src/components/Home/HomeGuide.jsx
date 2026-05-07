@@ -13,8 +13,10 @@ export default function HomeGuide() {
 
                     <div className="mt-12 gap-y-8 md:gap-y-0 flex flex-wrap md:flex-nowrap">
                         {/* First Image */}
-                        <div className="inline-block w-full sm:w-1/2 md:w-1/4 min-h-[220px] overflow-hidden px-2">
-                            <img src="src/assets/images/holistic.webp" alt="" className="w-full h-full object-cover rounded-xl" />
+                        <div className="inline-block w-full sm:w-1/2 md:w-1/4 min-h-[220px] px-2">
+                            <div className="w-full h-full overflow-hidden rounded-xl group relative">
+                                <img data-speed="0.9" src="src/assets/images/holistic.webp" alt="" className="absolute -top-[10%] left-0 w-full h-[120%] object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                            </div>
                         </div>
 
                         {/* Text Content */}
@@ -27,8 +29,10 @@ export default function HomeGuide() {
                         </div>
 
                         {/* Second Image */}
-                        <div className="inline-block w-full sm:w-1/2 md:w-1/4 order-3 sm:order-2 md:order-3 min-h-[220px] overflow-hidden px-2">
-                            <img src="src/assets/images/holistic.webp" alt="" className="w-full h-full object-cover rounded-xl" />
+                        <div className="inline-block w-full sm:w-1/2 md:w-1/4 order-3 sm:order-2 md:order-3 min-h-[220px] px-2">
+                            <div className="w-full h-full overflow-hidden rounded-xl group relative">
+                                <img data-speed="1.1" src="src/assets/images/holistic.webp" alt="" className="absolute -top-[10%] left-0 w-full h-[120%] object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                            </div>
                         </div>
                     </div>
                 </div>

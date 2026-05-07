@@ -2,6 +2,9 @@ import SamahLogo from "../assets/images/samah-wellness-logo.svg";
 import { Link } from "react-router-dom";
 import { ChevronDown, UserRound, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import BubbleButton from "../components/BubbleButton";
+import { createPortal } from "react-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -32,16 +35,16 @@ export default function Header() {
         {/* Desktop Right */}
         <ul className="hidden lg:flex items-center gap-5 ml-auto text-[#323C26]">
           <li>
-            <Link className="flex items-center gap-1 py-2 px-4 border border-[#3A391B] rounded-full">
+            <BubbleButton to="#" className="flex items-center gap-1 py-2 px-4 border border-[#3A391B] rounded-full" bubbleColor="bg-[#3A391B]/10">
               <UserRound fill="#3A391B" stroke={0} />
               Log In
-            </Link>
+            </BubbleButton>
           </li>
           <li>
-            <Link className="flex items-center gap-1 bg-[#BF7F81] rounded-full text-white py-2 px-4">
+            <BubbleButton to="#" className="flex items-center gap-1 bg-[#BF7F81] rounded-full text-white py-2 px-4" bubbleColor="bg-white/30">
               <UserRound fill="#FFFFFF" stroke={0} />
               Book a Consultation
-            </Link>
+            </BubbleButton>
           </li>
         </ul>
 
@@ -55,45 +58,48 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div
-        className={`
-          fixed top-0 left-0 w-full h-full bg-white z-40
-          transform transition-transform duration-500 ease-in-out
-          ${open ? "translate-y-0" : "-translate-y-full"}
-        `}
-      >
-        {/* Top bar inside menu */}
-        <div className="flex items-center justify-between p-4 border-b border-[#eee]">
-          <img src={SamahLogo} alt="logo" width={100} />
-          <button onClick={() => setOpen(false)}>
-            <X size={26} />
-          </button>
-        </div>
-
-        {/* Menu items */}
-        <div className="flex flex-col items-start gap-6 p-6 text-lg text-[#323C26]">
-          <Link onClick={() => setOpen(false)}>About</Link>
-          <Link onClick={() => setOpen(false)} className="flex items-center gap-1">
-            Offerings <ChevronDown size={18} />
-          </Link>
-          <Link onClick={() => setOpen(false)}>Memberships</Link>
-          <Link onClick={() => setOpen(false)}>Pathways</Link>
-          <Link onClick={() => setOpen(false)}>Blog</Link>
-          <Link onClick={() => setOpen(false)}>Contact Us</Link>
-
-          {/* Buttons */}
-          <div className="flex flex-col gap-4 w-full mt-4">
-            <Link className="flex justify-center items-center gap-2 py-3 border border-[#3A391B] rounded-full">
-              <UserRound fill="#3A391B" stroke={0} />
-              Log In
-            </Link>
-            <Link className="flex justify-center items-center gap-2 py-3 bg-[#BF7F81] text-white rounded-full">
-              <UserRound fill="#fff" stroke={0} />
-              Book a Consultation
-            </Link>
+      {createPortal(
+        <div
+          className={`
+            fixed top-0 left-0 w-full h-full bg-white z-[60]
+            transform transition-transform duration-500 ease-in-out
+            ${open ? "translate-y-0" : "-translate-y-full"}
+          `}
+        >
+          {/* Top bar inside menu */}
+          <div className="flex items-center justify-between p-4 border-b border-[#eee]">
+            <img src={SamahLogo} alt="logo" width={100} />
+            <button onClick={() => setOpen(false)}>
+              <X size={26} />
+            </button>
           </div>
-        </div>
-      </div>
+
+          {/* Menu items */}
+          <div className="flex flex-col items-start gap-6 p-6 text-lg text-[#323C26]">
+            <Link onClick={() => setOpen(false)}>About</Link>
+            <Link onClick={() => setOpen(false)} className="flex items-center gap-1">
+              Offerings <ChevronDown size={18} />
+            </Link>
+            <Link onClick={() => setOpen(false)}>Memberships</Link>
+            <Link onClick={() => setOpen(false)}>Pathways</Link>
+            <Link onClick={() => setOpen(false)}>Blog</Link>
+            <Link onClick={() => setOpen(false)}>Contact Us</Link>
+
+            {/* Buttons */}
+            <div className="flex flex-col gap-4 w-full mt-4">
+              <BubbleButton to="#" className="flex justify-center items-center gap-2 py-3 border border-[#3A391B] rounded-full" bubbleColor="bg-[#3A391B]/10">
+                <UserRound fill="#3A391B" stroke={0} />
+                Log In
+              </BubbleButton>
+              <BubbleButton to="#" className="flex justify-center items-center gap-2 py-3 bg-[#BF7F81] text-white rounded-full" bubbleColor="bg-white/30">
+                <UserRound fill="#fff" stroke={0} />
+                Book a Consultation
+              </BubbleButton>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </header>
   );
 }

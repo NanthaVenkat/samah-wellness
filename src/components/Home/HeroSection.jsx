@@ -1,5 +1,7 @@
 // import HeroBanner from "../../assets/images/hero_banner.webp";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import BubbleButton from "../BubbleButton";
 
 export default function HeroSection() {
 
@@ -7,7 +9,8 @@ export default function HeroSection() {
         <>
             <section className="">
                 <div className="grid grid-cols-1 xl:grid-cols-[55%_45%]">
-                    <div className="bg-[url('assets/images/hero_banner.webp')] bg-center bg-cover min-h-[350px]">
+                    <div className="min-h-[350px] overflow-hidden group">
+                        <div data-speed="0.9" className="w-full h-[120%] -top-[10%] relative bg-[url('assets/images/hero_banner.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
                     </div>
                     <form className="flex flex-col justify-center gap-4 font-montserrat text-[#3A391B] font-medium text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] p-[clamp(0.85rem,3.2vw,4.2rem)] leading-normal xl:mx-10">
                         <div>
@@ -29,7 +32,12 @@ export default function HeroSection() {
 
                         <p className="font-medium">If you’re curious whether <b>Samah is right for you,</b> we invite you to begin with a <b>complimentary 15‑minute call.</b></p>
 
-                        <button type="submit" className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] p-3 text-white rounded">Book a 15‑Minute Call <ArrowRight /></button>
+                        <BubbleButton 
+                            type="submit" 
+                            className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] p-3 text-white rounded"
+                        >
+                            Book a 15‑Minute Call <ArrowRight />
+                        </BubbleButton>
 
                     </form>
                 </div>

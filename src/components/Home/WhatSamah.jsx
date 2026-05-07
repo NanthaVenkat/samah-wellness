@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion';
+import BubbleButton from '../BubbleButton';
 
 const evolving = [
     { phara: 'Integrated, not fragmented and root‑cause focused' },
@@ -14,7 +16,9 @@ export default function WhatIsSamah() {
     return (
         <section className="bg-white">
             <div className="flex flex-col md:flex-row">
-                <div className="w-full md:w-1/2 bg-[url('src/assets/images/holistic.webp')] bg-center bg-cover min-h-[460px]"></div>
+                <div className="w-full md:w-1/2 min-h-[460px] overflow-hidden relative group">
+                    <div data-speed="0.9" className="absolute -top-[10%] left-0 w-full h-[120%] bg-[url('src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                </div>
 
                 <div className="w-full md:w-1/2 p-5 sm:p-8 lg:p-18 font-albert space-y-2">
                     <h2 className="text-xl md:text-4xl mb-6 text-[#68320A]">What Makes Samah Different?</h2>
@@ -35,7 +39,9 @@ export default function WhatIsSamah() {
                             ))}
                         </div>
 
-                        <Link className='flex items-center justify-center font-montserrat font-medium py-2 px-4 gap-3 text-white bg-[#68320A] w-full text-center rounded'>Book a 15‑Minute Call <ArrowRight /></Link>
+                        <BubbleButton to='#' className='flex items-center justify-center font-montserrat font-medium py-2 px-4 gap-3 text-white bg-[#68320A] w-full text-center rounded'>
+                            Book a 15‑Minute Call <ArrowRight />
+                        </BubbleButton>
 
                     </div>
                 </div>
