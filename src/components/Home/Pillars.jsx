@@ -4,31 +4,36 @@ import { motion } from "framer-motion";
 import BubbleButton from "../BubbleButton";
 import piller1Image from '/src/assets/images/home-10.png'
 import piller2Image from '/src/assets/images/home-9.png'
+import piller1Icon from '/src/assets/images/BodyRejuvenation.svg'
+import piller2Icon from '/src/assets/images/MindEmotions.svg'
+import piller3Icon from '/src/assets/images/EnergyPrana.svg'
+import piller4Icon from '/src/assets/images/SoulSpirit.svg'
+import piller5Icon from '/src/assets/images/SocialConnectionCommunity.svg'
 
 export default function Pillars() {
   const pillars = [
     {
-      img: "/src/assets/images/BodyRejuvenation.svg",
+      img: piller1Icon,
       title: "Body & Rejuvenation",
       phara: "Return to ease within the body",
     },
     {
-      img: "/src/assets/images/MindEmotions.svg",
+      img: piller2Icon,
       title: "Mind & Emotions",
       phara: "Soften, understand, and clear within",
     },
     {
-      img: "/src/assets/images/EnergyPrana.svg",
+      img: piller3Icon,
       title: "Energy & Prana",
       phara: "Restore flow and inner vitality",
     },
     {
-      img: "/src/assets/images/SoulSpirit.svg",
+      img: piller4Icon,
       title: "Soul & Spirit",
       phara: "Reconnect with meaning and stillness",
     },
     {
-      img: "/src/assets/images/SocialConnectionCommunity.svg",
+      img: piller5Icon,
       title: "Social Connection & Community",
       phara: "Feel held, seen, and belong",
     },

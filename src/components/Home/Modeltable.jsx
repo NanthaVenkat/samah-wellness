@@ -6,6 +6,8 @@ import "swiper/css/effect-fade";
 import { Navigation, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
 import BubbleButton from "../BubbleButton";
+import reviwersImg from "/src/assets/images/reviwers.png";
+import foundImage from "/src/assets/images/founded.png"
 
 const tableDatas = [
   {
@@ -42,14 +44,14 @@ const tableDatas = [
 
 const founderSlider = [
   {
-    image: "src/assets/images/founded.png",
+    image: foundImage,
     title: "From our Founder",
     phara:
       "Born from lived experiences,<br/> Samah is a space we once searched for— and chose to create.",
     link: "/about",
   },
   {
-    image: "src/assets/images/founded.png",
+    image: foundImage,
     title: "From our Founder",
     phara:
       "Born from lived experiences,<br/> Samah is a space we once searched for— and chose to create.",
@@ -167,7 +169,7 @@ export default function ModelTable() {
             <div>
               <p className="flex items-center text-[#3A391B] gap-3 mb-12 font-medium font-montserrat text-2xl">
                 <img
-                  src="src/assets/images/reviwers.png"
+                  src={reviwersImg}
                   alt=""
                   className="h-[50px]"
                 />
