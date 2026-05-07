@@ -61,10 +61,10 @@ export default function Pillars() {
           </div>
 
           <div className="w-full md:w-1/2 p-5 sm:p-8 lg:p-18 font-albert flex flex-col justify-center">
-            <h2 className="text-xl md:text-2xl mb-6 text-[#8A8341]">
+            <h2 className="text-xl md:text-3xl mb-8 text-[#8A8341]">
               Five Pillars, One you at Samah
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-6 lg:px-5">
               {pillars.map((pillar, index) => (
                 <div
                   key={index}
@@ -73,7 +73,7 @@ export default function Pillars() {
                   <img
                     src={pillar.img}
                     alt={pillar.title}
-                    className="w-[40px]"
+                    className="w-[40px] mr-3"
                   />
                   <div className="space-y-1.5">
                     <h1 className="text-xl">{pillar.title}</h1>
