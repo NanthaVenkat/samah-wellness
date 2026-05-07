@@ -44,8 +44,8 @@ export default function HomeAbout() {
                         <p className="font-montserrat font-medium text-[clamp(0.85rem,0.98rem+0.2vw,3.125rem)]">A science‑aware, deeply personalised wellness ecosystem.</p>
                     </div>
 
-                    <div className="min-h-[220px] rounded-xl overflow-hidden relative">
-                        <div data-speed="0.95" className="absolute -top-[10%] left-0 w-full h-[120%] bg-[url('assets/images/holistic.webp')] bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                    <div className="min-h-[220px] rounded-xl overflow-hidden relative group">
+                        <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('assets/images/holistic.webp')] bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"></div>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import HeroSection from "../components/Home/HeroSection";
 import HomeAbout from "../components/Home/HomeAbout";
 import HomeGuide from "../components/Home/HomeGuide";
@@ -5,33 +6,36 @@ import Pillars from "../components/Home/Pillars";
 import Workshop from "../components/Home/Workshop";
 import WhatIsSamah from "../components/Home/WhatSamah";
 import ModelTable from "../components/Home/Modeltable";
-import FadeIn from "../components/FadeIn";
+import { usePageEffects } from "../hooks/usePageEffects";
 
 function HomePage() {
+    const container = useRef(null);
+    usePageEffects(container);
+
     return (
-        <>
-            <FadeIn delay={0.1} y={20}>
+        <div ref={container}>
+            <div className="reveal" data-delay="0.1">
                 <HeroSection />
-            </FadeIn>
-            <FadeIn delay={0.1} y={30}>
+            </div>
+            <div className="reveal" data-delay="0.1">
                 <HomeAbout />
-            </FadeIn>
-            <FadeIn delay={0.1} y={30}>
+            </div>
+            <div className="reveal" data-delay="0.1">
                 <HomeGuide />
-            </FadeIn>
-            <FadeIn delay={0.1} y={30}>
+            </div>
+            <div className="reveal" data-delay="0.1">
                 <Pillars />
-            </FadeIn>
-            <FadeIn delay={0.1} y={30}>
+            </div>
+            <div className="reveal" data-delay="0.1">
                 <Workshop />
-            </FadeIn>
-            <FadeIn delay={0.1} y={30}>
+            </div>
+            <div className="reveal" data-delay="0.1">
                 <WhatIsSamah />
-            </FadeIn>
-            <FadeIn delay={0.1} y={30}>
+            </div>
+            <div className="reveal" data-delay="0.1">
                 <ModelTable />
-            </FadeIn>
-        </>
+            </div>
+        </div>
     )
 }
 

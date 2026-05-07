@@ -126,14 +126,14 @@ export default function ModelTable() {
                   class="bg-[#D5CFBA] rounded-xl group overflow-hidden"
                 >
                   <div class="grid lg:grid-cols-2">
-                    <div className="p-12 overflow-hidden">
+                    <div className="p-18 overflow-hidden">
                       <img
                         src={founderSlide.image}
                         alt=""
                         className="rounded-xl w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                     </div>
-                    <div class="flex flex-col gap-8 p-12 font-montserrat">
+                    <div class="flex flex-col gap-8 p-18 font-montserrat">
                       <div>
                         <h1 className="text-title-xl !text-left text-[#68320A]">
                           From our Founder

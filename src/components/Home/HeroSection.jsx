@@ -10,9 +10,9 @@ export default function HeroSection() {
             <section className="">
                 <div className="grid grid-cols-1 xl:grid-cols-[55%_45%]">
                     <div className="min-h-[350px] overflow-hidden group">
-                        <div data-speed="0.9" className="w-full h-[120%] -top-[10%] relative bg-[url('assets/images/hero_banner.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                        <div className="parallax hero-image w-full h-[120%] -top-[10%] relative bg-[url('assets/images/hero_banner.webp')] bg-center bg-cover"></div>
                     </div>
-                    <form className="flex flex-col justify-center gap-4 font-montserrat text-[#3A391B] font-medium text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] p-[clamp(0.85rem,3.2vw,4.2rem)] leading-normal xl:mx-10">
+                    <form className="flex flex-col justify-center gap-4 font-montserrat text-[#3A391B] font-medium text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] p-[clamp(0.85rem,3.2vw,4.2rem)] leading-normal xl:mx-10 max-w-3xl mx-auto">
                         <div>
                             <h1 className="text-[#8A8341] text-[clamp(2rem,3.2vw,3.5rem)] font-roundhand mb-0"><i>Not sure where to begin?</i></h1>
                             <h1 className="font-albert text-[clamp(1.8rem,2.2vw,2.5rem)] text-[#68320A] mb-4">Start with a gentle conversation.</h1>

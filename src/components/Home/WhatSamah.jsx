@@ -17,10 +17,10 @@ export default function WhatIsSamah() {
         <section className="bg-white">
             <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 min-h-[460px] overflow-hidden relative group">
-                    <div data-speed="0.9" className="absolute -top-[10%] left-0 w-full h-[120%] bg-[url('src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                    <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
                 </div>
 
-                <div className="w-full md:w-1/2 p-5 sm:p-8 lg:p-18 font-albert space-y-2">
+                <div className="w-full md:w-1/2 max-w-3xl mx-auto p-5 sm:p-8 lg:p-18 font-albert space-y-2">
                     <h2 className="text-xl md:text-4xl mb-6 text-[#68320A]">What Makes Samah Different?</h2>
                     <p className='text-[#3A391B] text-xl font-light'>You visit one place for movement.</p>
                     <p className='text-[#3A391B] text-xl font-light'>Another for recovery.</p>
