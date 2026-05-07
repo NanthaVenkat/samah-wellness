@@ -6,27 +6,27 @@ import BubbleButton from "../BubbleButton";
 export default function Pillars() {
   const pillars = [
     {
-      img: "src/assets/images/BodyRejuvenation.svg",
+      img: "/src/assets/images/BodyRejuvenation.svg",
       title: "Body & Rejuvenation",
       phara: "Return to ease within the body",
     },
     {
-      img: "src/assets/images/MindEmotions.svg",
+      img: "/src/assets/images/MindEmotions.svg",
       title: "Mind & Emotions",
       phara: "Soften, understand, and clear within",
     },
     {
-      img: "src/assets/images/EnergyPrana.svg",
+      img: "/src/assets/images/EnergyPrana.svg",
       title: "Energy & Prana",
       phara: "Restore flow and inner vitality",
     },
     {
-      img: "src/assets/images/SoulSpirit.svg",
+      img: "/src/assets/images/SoulSpirit.svg",
       title: "Soul & Spirit",
       phara: "Reconnect with meaning and stillness",
     },
     {
-      img: "src/assets/images/SocialConnectionCommunity.svg",
+      img: "/src/assets/images/SocialConnectionCommunity.svg",
       title: "Social Connection & Community",
       phara: "Feel held, seen, and belong",
     },
@@ -57,7 +57,7 @@ export default function Pillars() {
 
         <div className="mt-12 flex flex-col md:flex-row lg:h-[80vh]">
           <div className="w-full md:w-1/2 min-h-[460px] overflow-hidden relative group">
-            <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+            <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('/src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
           </div>
 
           <div className="w-full md:w-1/2 p-5 sm:p-8 lg:p-18 font-albert flex flex-col justify-center">
@@ -91,7 +91,7 @@ export default function Pillars() {
       <section className="bg-[#e9e2d3]">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 md:order-2 min-h-[460px] overflow-hidden relative group">
-            <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+            <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('/src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
           </div>
 
           <div className="w-full md:w-1/2 max-w-3xl mx-auto p-5 sm:p-8 lg:p-18 font-albert lg:h-[80vh] flex flex-col justify-center">
