@@ -6,21 +6,29 @@ import { Calendar, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion';
 import BubbleButton from '../BubbleButton';
+import indulgeImage1 from '/src/assets/images/home-1.png'
+import indulgeImage2 from '/src/assets/images/Memberships.png'
+import indulgeImage3 from '/src/assets/images/home-2.png'
+import indulgeImage4 from '/src/assets/images/home-4.png'
+import workshopImg1 from '/src/assets/images/home-1.png'
+import workshopImg2 from '/src/assets/images/Memberships.png'
+import workshopImg3 from '/src/assets/images/home-2.png'
+import workshopImg4 from '/src/assets/images/home-4.png'
 
 const workshopSlider = [
-    { image: '/src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: '/src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: '/src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: '/src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: '/src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: '/src/assets/images/holistic.webp', type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg1, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg2, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg3, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg4, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg1, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg2, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
 ]
 
 const indulgeSlider = [
-    { link: '/src/assets/images/holistic.webp', title: 'Structured Offerings', phara: 'Consistent practices to ground your everyday' },
-    { link: '/src/assets/images/holistic.webp', title: 'Memberships', phara: 'A holistic rhythm of care across all dimensions' },
-    { link: '/src/assets/images/holistic.webp', title: 'Pathways', phara: 'Guided journeys for specific goals and transformations' },
-    { link: '/src/assets/images/holistic.webp', title: 'Events', phara: 'Circles, workshops, retreats & gatherings for connection & exploration' }
+    { img: indulgeImage1, link: '/src/assets/images/holistic.webp', title: 'Structured Offerings', phara: 'Consistent practices to ground your everyday' },
+    { img: indulgeImage2, link: '/src/assets/images/holistic.webp', title: 'Memberships', phara: 'A holistic rhythm of care across all dimensions' },
+    { img: indulgeImage3, link: '/src/assets/images/holistic.webp', title: 'Pathways', phara: 'Guided journeys for specific goals and transformations' },
+    { img: indulgeImage4, link: '/src/assets/images/holistic.webp', title: 'Events', phara: 'Circles, workshops, retreats & gatherings for connection & exploration' }
 ]
 
 export default function Workshop() {
@@ -50,7 +58,7 @@ export default function Workshop() {
                             <SwiperSlide key={index}>
                                 {/* Added 'flex' to this div so h-full works on the inner child */}
                                 <div className="relative overflow-hidden flex h-[460px] z-[2] group rounded-lg">
-                                    <div className="absolute inset-0 z-0 bg-[url('/src/assets/images/holistic.webp')] bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"></div>
+                                    <div className="absolute inset-0 z-0 bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110" style={{backgroundImage: `url(${item.image})`}}/>
                                     <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent to-black opacity-50 from-[50%] to-[100%] pointer-events-none"></div>
                                     <div className="relative z-[2] w-full p-5 flex flex-col justify-between">
 
@@ -100,7 +108,7 @@ export default function Workshop() {
                             <SwiperSlide key={index}>
                                 {/* Added 'flex' to this div so h-full works on the inner child */}
                                 <div className="relative rounded-lg overflow-hidden bg-white group">
-                                    <img src="/src/assets/images/Memberships.png" alt="membership" className='h-[380px] w-full object-center object-cover transition-transform duration-700 ease-out group-hover:scale-110' />
+                                    <img src={item.img} alt="membership" className='h-[380px] w-full object-center object-cover transition-transform duration-700 ease-out group-hover:scale-110' />
                                     <div className='text-center font-montserrat space-y-3 p-5 text-[#3A391B]'>
                                         <h4 className='text-xl font-albert'>{item.title}</h4>
                                         <p className='font-medium'>{item.phara}</p>

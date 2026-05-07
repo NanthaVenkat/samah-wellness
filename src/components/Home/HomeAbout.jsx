@@ -1,4 +1,8 @@
-import whatSamah1 from "../../assets/images/what-samah.webp"
+import whatSamah1 from "/src/assets/images/what-samah.webp";
+import whatSamah2 from "/src/assets/images/holistic.webp";
+import whatSamah3 from "/src/assets/images/home-2.png";
+import whatSamah4 from "/src/assets/images/home-3.png";
+import whatSamah5 from "/src/assets/images/home-4.png";
 
 export default function HomeAbout() {
     return (
@@ -19,21 +23,21 @@ export default function HomeAbout() {
                         <div className="text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] text-[#3A391B] z-10">
                             <p className="font-medium">Not just <br /><b>another Studio</b></p>
                         </div>
-                        <img src={whatSamah1} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
+                        <img src={whatSamah3} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
                     </div>
 
                     <div class="rounded-xl p-4 flex items-center justify-between gap-5 font-montserrat bg-[#D5CFBA] group overflow-hidden">
                         <div className="text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] text-[#3A391B] z-10">
                             <p className="font-medium">Not just <br /><b>another Studio</b></p>
                         </div>
-                        <img src={whatSamah1} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
+                        <img src={whatSamah4} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
                     </div>
 
                     <div class="rounded-xl p-4 flex items-center justify-between gap-5 font-montserrat bg-[#D5CFBA] group overflow-hidden">
                         <div className="text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] text-[#3A391B] z-10">
                             <p className="font-medium">Not just <br /><b>another Studio</b></p>
                         </div>
-                        <img src={whatSamah1} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
+                        <img src={whatSamah5} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
                     </div>
                 </div>
 
@@ -45,10 +49,14 @@ export default function HomeAbout() {
                     </div>
 
                     <div className="min-h-[220px] rounded-xl overflow-hidden relative group">
-                        <div className="parallax absolute -top-[10%] left-0 w-full h-[120%] bg-[url('assets/images/holistic.webp')] bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"></div>
+
+                        <div
+                            className='parallax absolute -top-[10%] left-0 w-full h-[120%] bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105'
+                            style={{ backgroundImage: `url(${whatSamah2})` }}
+                        />
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

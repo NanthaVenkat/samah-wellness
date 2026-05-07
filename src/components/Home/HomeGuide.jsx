@@ -1,3 +1,6 @@
+import GuidImg1 from '/src/assets/images/hero_banner.webp'
+import GuidImg2 from '/src/assets/images/home-11.png'
+
 export default function HomeGuide() {
     return (
         <>
@@ -15,7 +18,7 @@ export default function HomeGuide() {
                         {/* First Image */}
                         <div className="inline-block w-full sm:w-1/2 md:w-1/4 min-h-[220px] px-2">
                             <div className="w-full h-full overflow-hidden rounded-xl group relative">
-                                <img src="/src/assets/images/holistic.webp" alt="" className="parallax absolute -top-[10%] left-0 w-full h-[120%] object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                                <img src={GuidImg1} alt="" className="parallax absolute -top-[10%] left-0 w-full h-[120%] object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
                             </div>
                         </div>
 
@@ -31,7 +34,7 @@ export default function HomeGuide() {
                         {/* Second Image */}
                         <div className="inline-block w-full sm:w-1/2 md:w-1/4 order-3 sm:order-2 md:order-3 min-h-[220px] px-2">
                             <div className="w-full h-full overflow-hidden rounded-xl group relative">
-                                <img src="/src/assets/images/holistic.webp" alt="" className="parallax absolute -top-[10%] left-0 w-full h-[120%] object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                                <img src={GuidImg2} alt="" className="parallax absolute -top-[10%] left-0 w-full h-[120%] object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
                             </div>
                         </div>
                     </div>
