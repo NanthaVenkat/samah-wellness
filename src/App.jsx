@@ -1,43 +1,42 @@
-import { useEffect } from "react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import SiteLayout from "./components/SiteLayout";
-import HomePage from "./pages/HomePage";
-import MembershipsPage from "./pages/MembershipsPage";
-import OfferingsPage from "./pages/OfferingsPage";
+import HomePage from "./pages/HomePage.jsx";
+import { Route, Routes, Navigate } from "react-router-dom";
+import Header from "../src/layouts/Header.jsx"
+import Footer from "../src/layouts/Footer.jsx"
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollSmoother";
 
-function ScrollManager() {
-  const location = useLocation();
-
-  useEffect(() => {
-    const scrollToTarget = () => {
-      if (location.hash) {
-        const target = document.getElementById(location.hash.slice(1));
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-          return;
-        }
-      }
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-    const frameId = window.requestAnimationFrame(scrollToTarget);
-    return () => window.cancelAnimationFrame(frameId);
-  }, [location.pathname, location.hash]);
-
-  return null;
-}
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function App() {
+  const smoothWrapper = useRef(null);
+  const smoothContent = useRef(null);
+
+  useEffect(() => {
+    let smoother = ScrollSmoother.create({
+      wrapper: smoothWrapper.current,
+      content: smoothContent.current,
+      smooth: 1.5,
+      effects: true,
+    });
+
+    return () => {
+      smoother.kill();
+    };
+  }, []);
+
+
   return (
-    <>
-      <ScrollManager />
-      <Routes>
-        <Route element={<SiteLayout />}>
-          <Route index element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/offerings" element={<OfferingsPage />} />
-          <Route path="/memberships" element={<MembershipsPage />} />
-        </Route>
-      </Routes>
-    </>
+    <div id="smooth-wrapper" ref={smoothWrapper}>
+      <div id="smooth-content" ref={smoothContent}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
+        </Routes>
+        <Footer />
+      </div>
+    </div>
   );
 }

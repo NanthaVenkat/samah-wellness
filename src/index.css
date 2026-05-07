@@ -1,74 +1,151 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
+@tailwind utilities;
 
-@theme {
-  --color-bg: #f5f0e4;
-  --color-bg-soft: #fbf8ef;
-  --color-paper: #f4eedc;
-  --color-olive: #3d4019;
-  --color-olive-soft: #999245;
-  --color-brown: #7d3f0f;
-  --color-brown-deep: #6a3208;
-  --color-blush: #c98b8c;
-  --color-line: rgba(91, 66, 30, 0.1);
-  --color-brand-text: #382716;
-  --color-muted: #65523d;
-  --color-brand-white: #fffdf8;
-  
-  --font-lora: "Lora", Georgia, serif;
-  --font-outfit: "Outfit", sans-serif;
-  
-  --shadow-brand: 0 10px 40px rgba(91, 66, 30, 0.05);
-  --shadow-brand-hover: 0 20px 60px rgba(91, 66, 30, 0.1);
-  
-  --ease-relaxed: cubic-bezier(0.22, 1, 0.36, 1);
+/* Custom webfonts */
+@font-face {
+  font-family: 'Albertus';
+  src: url('./assets/fonts/AlbertusNova/albertusnovathin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
-@layer base {
-  *, ::before, ::after {
-    @apply border-line;
-  }
-  
-  body {
-    @apply bg-bg text-brand-text font-lora antialiased selection:bg-olive-soft selection:text-brand-white;
-    background-image: 
-      radial-gradient(circle at top, rgba(233, 211, 151, 0.25), transparent 45%),
-      linear-gradient(180deg, #faf6ed 0%, var(--color-bg) 100%);
-    /* Prevent fighting with GSAP scroll normalization if any */
-    overscroll-behavior-y: none;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-outfit;
-  }
+@font-face {
+  font-family: 'Albertus';
+  src: url('./assets/fonts/AlbertusNova/albertusnovalight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-@layer components {
-  .shell {
-    @apply mx-auto w-[min(1200px,calc(100vw-2rem))];
-  }
-  
-  .band {
-    @apply py-[clamp(4rem,9vw,7.5rem)];
-  }
-  
-  .card-soft {
-    @apply rounded-[1.5rem] border border-[rgba(112,85,46,0.08)] bg-[rgba(255,252,244,0.95)] shadow-brand transition-all duration-500 ease-relaxed;
-  }
-
-  /* Prevent CSS transitions from fighting GSAP animations */
-  .reveal, .parallax {
-    transition: none !important;
-  }
-  
-  /* Restore hover transitions specifically for non-GSAP properties */
-  .card-soft:hover {
-    @apply shadow-brand-hover -translate-y-1;
-  }
+@font-face {
+  font-family: 'Albertus';
+  src: url('./assets/fonts/AlbertusNova/albertusnova.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'Albertus';
+  src: url('./assets/fonts/AlbertusNova/albertusnova_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundhand';
+  src: url('./assets/fonts/roundhand/Roundhand Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundhand';
+  src: url('./assets/fonts/roundhand/Roundhand Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tailwind font utility classes */
 @layer utilities {
-  .balance {
-    text-wrap: balance;
+  .font-albert {
+    font-family: 'Albertus', serif;
   }
+
+  .font-montserrat {
+    font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+
+  .font-roundhand {
+    font-family: 'Roundhand', cursive;
+  }
+
+  .text-title {
+    @apply text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] uppercase text-center mb-4;
+  }
+
+  .text-title-xl {
+    @apply text-[clamp(1.85rem,1.25rem+1.2vw,3.125rem)] text-center font-light mb-4;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #F7F5E9;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.text-title,
+.text-title-xl {
+  font-family: 'Albertus', serif;
+}
+
+.workshop-slider [class*='swiper-button'],
+.founder-slider [class*='swiper-button'],
+.review-slider [class*='swiper-button'] {
+  background-color: rgba(0, 0, 0, 0.671);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.workshop-slider [class*='swiper-button'] svg,
+.founder-slider [class*='swiper-button'] svg,
+.review-slider [class*='swiper-button'] svg {
+  fill: #fff;
+  color: #fff;
+  width: 10px;
+}
+
+.model-table::after {
+  content: '';
+  position: absolute;
+  left: calc(100% / 2);
+  top: 0;
+  width: calc(100% / 4);
+  height: 100%;
+  background-image: linear-gradient(#8A8341, #F7F5E9);
+  z-index: 0;
+}
+
+.model-table tr::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #3A391B4D;
+  bottom: 0;
+  left: 0;
 }
