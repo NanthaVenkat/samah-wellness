@@ -57,6 +57,7 @@ const founderSlider = [
       "Born from lived experiences,<br/> Samah is a space we once searched for— and chose to create.",
     link: "/about",
   },
+  
 ];
 
 const quoteSlider = [
@@ -68,6 +69,11 @@ const quoteSlider = [
   {
     quote: "For the Second time, my body feels supported instead of pushed.",
     name: "Nista Srinivasan",
+    location: "Coimbatore",
+  },
+    {
+    quote: "For the third time, my body feels supported instead of pushed.",
+    name: "Shruti Parthasarathy",
     location: "Coimbatore",
   },
 ];
@@ -128,14 +134,14 @@ export default function ModelTable() {
                   class="bg-[#D5CFBA] rounded-xl group overflow-hidden"
                 >
                   <div class="grid lg:grid-cols-2">
-                    <div className="p-18 overflow-hidden">
+                    <div className="p-5 lg:p-18 overflow-hidden">
                       <img
                         src={founderSlide.image}
                         alt=""
                         className="rounded-xl w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                     </div>
-                    <div class="flex flex-col gap-8 p-18 font-montserrat">
+                    <div class="flex flex-col gap-8 p-5 lg:p-18 font-montserrat">
                       <div>
                         <h1 className="text-title-xl !text-left text-[#68320A]">
                           From our Founder

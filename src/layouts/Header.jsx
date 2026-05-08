@@ -10,7 +10,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="site-header border-b border-[#3A391B80] p-2 relative z-50 bg-white font-montserrat font-medium">
+    <header className="site-header border-b border-[#3A391B80] px-4 py-2 relative z-50 bg-white font-montserrat font-medium">
       <nav className="container flex items-center mx-auto py-3 font-montserrat font-medium">
 
         {/* Logo */}
@@ -75,7 +75,7 @@ export default function Header() {
           </div>
 
           {/* Menu items */}
-          <div className="flex flex-col items-start gap-6 p-6 text-lg text-[#323C26]">
+          <div className="flex flex-col items-start gap-6 p-6 text-lg text-[#323C26] font-montserrat font-medium">
             <Link onClick={() => setOpen(false)}>About</Link>
             <Link onClick={() => setOpen(false)} className="flex items-center gap-1">
               Offerings <ChevronDown size={18} />

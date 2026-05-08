@@ -17,11 +17,11 @@ import workshopImg4 from '/src/assets/images/home-4.png'
 
 const workshopSlider = [
     { image: workshopImg1, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: workshopImg2, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: workshopImg3, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: workshopImg4, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: workshopImg1, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
-    { image: workshopImg2, type: 'Retreat', name: 'Event Name 1', tag: 'Tag Line', date: '14 Apr, 2026' },
+    { image: workshopImg3, type: 'Workshop', name: 'Event Name 2', tag: 'Tag Line', date: '16 Apr, 2026' },
+    { image: workshopImg4, type: 'Immersion', name: 'Event Name 3', tag: 'Tag Line', date: '17 Apr, 2026' },
+    { image: workshopImg2, type: 'Circle', name: 'Event Name 4', tag: 'Tag Line', date: '15 Apr, 2026' },
+    { image: workshopImg1, type: 'Triangle', name: 'Event Name 5', tag: 'Tag Line', date: '18 Apr, 2026' },
+    { image: workshopImg2, type: 'Rectangle', name: 'Event Name 6', tag: 'Tag Line', date: '19 Apr, 2026' },
 ]
 
 const indulgeSlider = [
@@ -112,7 +112,7 @@ export default function Workshop() {
                                     <div className='text-center font-montserrat space-y-3 p-5 text-[#3A391B]'>
                                         <h4 className='text-xl font-albert'>{item.title}</h4>
                                         <p className='font-medium'>{item.phara}</p>
-                                        <BubbleButton to='/about' className='border-[#68320A] font-medium text-[#68320A] border-b pb-1 inline-block w-max mx-auto md:mx-0' bubbleColor="bg-[#68320A]/10">
+                                        <BubbleButton to='/about' className='border-[#68320A] font-medium text-[#68320A] border-b pb-1 inline-block w-max mx-auto inline-block' bubbleColor="bg-[#68320A]/10">
                                             Explore More <ArrowRight className='inline-block w-[20px]' />
                                         </BubbleButton>
                                     </div>
