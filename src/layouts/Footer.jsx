@@ -9,7 +9,7 @@ export default function Footer() {
                         <img src={footerLogo} alt="" className="w-[110px] mx-auto mb-5"/>
                     </div>
 
-                    <p className="text-center text-white font-montserrat text-lg border-t pt-8">© 2025 JewelOne. All Rights Reserved.</p>
+                    <p className="text-center text-white font-montserrat text-lg border-t pt-8">© 2025 Samah Wellness. All Rights Reserved.</p>
                 </div>
             </footer>
         </>
