@@ -164,7 +164,7 @@ export default function ModelTable() {
                       <img
                         src={founderSlide.image}
                         alt=""
-                        className="rounded-xl w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                        className="rounded-xl w-full h-full max-h-[340px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                     </div>
                     <div class="flex flex-col gap-8 p-5 lg:p-18 font-montserrat">
