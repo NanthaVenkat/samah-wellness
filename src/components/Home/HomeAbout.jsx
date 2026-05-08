@@ -21,21 +21,21 @@ export default function HomeAbout() {
 
                     <div class="rounded-xl p-4 flex items-center justify-between gap-5 font-montserrat bg-[#D5CFBA] group overflow-hidden">
                         <div className="text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] text-[#3A391B] z-10">
-                            <p className="font-medium">Not just <br /><b>another Studio</b></p>
+                            <p className="font-medium">Not just <br /><b>another Spa</b></p>
                         </div>
                         <img src={whatSamah3} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
                     </div>
 
                     <div class="rounded-xl p-4 flex items-center justify-between gap-5 font-montserrat bg-[#D5CFBA] group overflow-hidden">
                         <div className="text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] text-[#3A391B] z-10">
-                            <p className="font-medium">Not just <br /><b>another Studio</b></p>
+                            <p className="font-medium">Not just <br /><b>another Clinic</b></p>
                         </div>
                         <img src={whatSamah4} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
                     </div>
 
                     <div class="rounded-xl p-4 flex items-center justify-between gap-5 font-montserrat bg-[#D5CFBA] group overflow-hidden">
                         <div className="text-[clamp(0.85rem,0.98rem+0.2vw,1.125rem)] text-[#3A391B] z-10">
-                            <p className="font-medium">Not just <br /><b>another Studio</b></p>
+                            <p className="font-medium">Nor a <br /><b>Spiritual Centre</b></p>
                         </div>
                         <img src={whatSamah5} alt="" className="object-center object-cover w-[120px] h-[120px] rounded-xl transition-transform duration-700 ease-out group-hover:scale-110" />
                     </div>

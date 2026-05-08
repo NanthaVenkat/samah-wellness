@@ -6,10 +6,10 @@ export default function Footer() {
             <footer className="bg-[#3A391B] py-12">
                 <div class="container mx-auto">
                     <div class="flex">
-                        <img src={footerLogo} alt="" className="w-[110px] mx-auto mb-5"/>
+                        <img src={footerLogo} alt="" className="w-[110px] mx-auto mb-5" />
                     </div>
 
-                    <p className="text-center text-white font-montserrat text-lg border-t pt-8">© 2025 Samah Wellness. All Rights Reserved.</p>
+                    <p className="text-center text-white font-montserrat text-lg border-t pt-8">© {new Date().getFullYear()} Samah Wellness. All Rights Reserved.</p>
                 </div>
             </footer>
         </>
