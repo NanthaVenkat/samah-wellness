@@ -38,7 +38,7 @@ export default function Workshop() {
                 <div className="container px-4 xl:px-8 mx-auto">
                     <div className="text-center text-white px-3">
                         <h1 className="text-title-xl mx-auto">Workshops & Retreats</h1>
-                        <p className="font-medium font-montserrat md:text-lg max-w-[680px] mx-auto mb-1.5">
+                        <p className="font-medium font-montserrat md:text-lg max-w-3xl mx-auto mb-1.5">
                             Explore immersive experiences— designed to help you pause, reflect, and reconnect.
                         </p>
                     </div>
@@ -88,7 +88,7 @@ export default function Workshop() {
                 <div className="container px-4 xl:px-8 mx-auto">
                     <div className="text-center text-[#68320A] px-3">
                         <h1 className="text-title-xl mx-auto">Four Ways to Indulge at Samah</h1>
-                        <p className="font-medium font-montserrat md:text-lg max-w-[680px] mx-auto mb-1.5 text-[#3A391B]">
+                        <p className="font-medium font-montserrat md:text-lg max-w-3xl mx-auto mb-1.5 text-[#3A391B]">
                             Wellbeing can be structured. It can also be gently indulgent.
                         </p>
                     </div>

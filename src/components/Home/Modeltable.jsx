@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import BubbleButton from "../BubbleButton";
 import reviwersImg from "/src/assets/images/reviwers.png";
 import foundImage from "/src/assets/images/founded.png"
+import workshopImg4 from '/src/assets/images/home-4.png'
 
 const tableDatas = [
   {
@@ -51,7 +52,7 @@ const founderSlider = [
     link: "/about",
   },
   {
-    image: foundImage,
+    image: workshopImg4,
     title: "From our Founder",
     phara:
       "Born from lived experiences,<br/> Samah is a space we once searched for— and chose to create.",

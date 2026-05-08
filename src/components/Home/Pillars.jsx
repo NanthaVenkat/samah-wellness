@@ -120,7 +120,7 @@ export default function Pillars() {
               Five Pillars, One you at Samah
             </h2>
 
-            <div className="space-y-3 lg:px-5">
+            <div className="space-y-3 lg:px-3">
               {pillars.map((pillar, index) => (
                 <button
                   key={index}
@@ -129,7 +129,7 @@ export default function Pillars() {
                   onMouseEnter={() => setActiveIndex(index)}
                   onFocus={() => setActiveIndex(index)}
                   aria-pressed={activeIndex === index}
-                  className={`flex w-full items-start gap-3 px-4 py-4 text-left text-[#3A391B] transition-all duration-300 cursor-pointer group/item `}
+                  className={`flex w-full items-start gap-3 py-4 text-left text-[#3A391B] transition-all duration-300 cursor-pointer group/item `}
                 >
                   <img
                     src={pillar.icon}
