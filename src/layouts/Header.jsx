@@ -1,16 +1,62 @@
 import SamahLogo from "../assets/images/samah-wellness-logo.svg";
 import { Link } from "react-router-dom";
 import { ChevronDown, UserRound, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import BubbleButton from "../components/BubbleButton";
 import { createPortal } from "react-dom";
 
 export default function Header() {
+  // const [open, setOpen] = useState(false);
+  // const [isVisible, setIsVisible] = useState(true);
+  // const lastScrollY = useRef(0);
+
   const [open, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const scrollThreshold = 5; // Minimum scroll distance before toggling
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY.current;
+
+      // Always show at the very top
+      if (currentScrollY <= 24) {
+        setIsVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Only change visibility if scroll distance exceeds threshold
+      if (Math.abs(scrollDelta) > scrollThreshold) {
+        if (scrollDelta > 0) {
+          // Scrolling DOWN - Hide header
+          setIsVisible(false);
+        } else {
+          // Scrolling UP - Show header
+          setIsVisible(true);
+        }
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    lastScrollY.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="site-header border-b border-[#3A391B80] px-4 py-2 relative z-50 bg-white font-montserrat font-medium">
+    <header
+      className={`site-header fixed top-0 left-0 w-full border-b border-[#3A391B80] px-4 py-2 z-50 bg-white font-montserrat font-medium transition-transform duration-300 ease-out ${isVisible || open
+          ? "translate-y-0"
+          : "-translate-y-full"
+        }`}
+    >
       <nav className="container flex items-center mx-auto py-3 font-montserrat font-medium">
 
         {/* Logo */}
@@ -35,7 +81,7 @@ export default function Header() {
         {/* Desktop Right */}
         <ul className="hidden lg:flex items-center gap-5 ml-auto text-[#323C26]">
           <li>
-            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 py-2 px-4 border border-[#3A391B] hover:border-[#fff] rounded-full" bubbleColor="bg-[#8A8341]">
+            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 py-2 px-4 border border-[#3A391B] hover:border-[#fff] rounded-full" bubbleColor="bg-[#8A8341]" textColor="text-[#fff]">
               <UserRound fill="#3A391B" stroke={0} />
               Log In
             </BubbleButton>

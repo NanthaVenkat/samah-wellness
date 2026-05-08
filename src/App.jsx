@@ -29,13 +29,15 @@ export default function App() {
 
   return (
     <div id="smooth-wrapper" ref={smoothWrapper}>
+      <Header />
       <div id="smooth-content" ref={smoothContent}>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<Navigate to="/" replace />} />
-        </Routes>
-        <Footer />
+        <div className="pt-[88px]">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<Navigate to="/" replace />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </div>
   );

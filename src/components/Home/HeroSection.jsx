@@ -19,11 +19,11 @@ export default function HeroSection() {
                             <p className="font-montserrat text-[#3A391B] font-medium">Tell us what your body has been experiencing, and our team will guide you toward the right next step.</p>
                         </div>
 
-                        <input type="text" placholder="Your Name" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full placeholder:text-[#3A391B50] outline-0" />
+                        <input type="text" placeholder="Your Name" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full outline-0" />
 
-                        <input type="number" placholder="Your Name" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full placeholder:text-[#3A391B50] outline-0" />
+                        <input type="number" placeholder="Your Number" className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none border-[#3A391B] border p-2 xl:p-3 rounded w-full outline-0" />
 
-                        <input type="email" placholder="Your Name" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full placeholder:text-[#3A391B50] outline-0" />
+                        <input type="email" placeholder="Email" className="border-[#3A391B] border p-2 xl:p-3 rounded w-full outline-0" />
 
                         <div className="flex flex-col ">
                             <label>What are you seeking support for?</label>
@@ -36,7 +36,7 @@ export default function HeroSection() {
                             type="submit" 
                             btnType="submit"
                             // bubbleColor='red'
-                            className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] p-3 text-white rounded"
+                            className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] py-3 px-4 text-white rounded"
                         >
                             Book a 15‑Minute Call <ArrowRight />
                         </BubbleButton>

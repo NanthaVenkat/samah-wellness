@@ -195,7 +195,7 @@ export default function Pillars() {
               <BubbleButton
                 to="/"
                 btnType="link"
-                className="flex items-center justify-center font-montserrat font-medium py-2 px-4 gap-3 text-white bg-[#8A8341] w-full text-center rounded"
+                className="flex items-center justify-center font-montserrat font-medium py-3 px-4 gap-3 text-white bg-[#8A8341] w-full text-center rounded"
               >
                 Explore what's new <ArrowRight />
               </BubbleButton>
