@@ -112,7 +112,7 @@ export default function Workshop() {
                                     <div className='text-center font-montserrat space-y-3 p-5 text-[#3A391B]'>
                                         <h4 className='text-xl font-albert'>{item.title}</h4>
                                         <p className='font-medium'>{item.phara}</p>
-                                        <BubbleButton to='/about' className='border-[#68320A] font-medium text-[#68320A] border-b pb-1 inline-block w-max mx-auto inline-block' bubbleColor="bg-[#68320A]/10">
+                                        <BubbleButton to='/about' btnType='link' className='border-[#68320A] font-medium text-[#68320A] border-b pb-1 inline-block w-max mx-auto inline-block' bubbleColor="bg-[#ffffff00]/10">
                                             Explore More <ArrowRight className='inline-block w-[20px]' />
                                         </BubbleButton>
                                     </div>

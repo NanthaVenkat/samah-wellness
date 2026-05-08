@@ -182,6 +182,7 @@ export default function ModelTable() {
 
                       <BubbleButton
                         to={founderSlide.link}
+                        btnType="link"
                         className="flex items-center gap-3 text-[clamp(1.3rem,0.98rem+0.2vw,1.125rem)] rounded-full bg-[#68320A] text-white px-5 py-2 w-max mt-auto"
                       >
                         Begin Your Journey <ArrowRight width={20} />
@@ -232,8 +233,8 @@ export default function ModelTable() {
                 {quoteSlider.map((slide, index) => (
                   <SwiperSlide key={index} className="p-8 text-center">
                     <div className="max-w-[520px] mx-auto my-12">
-                      <Quote className="text-red mx-auto mb-8" />
-                      <h4 className="text-xl md:text-3xl mb-8 font-light">
+                      <Quote fill="#212121" size={45} stroke="0" className="text-red mx-auto mb-8 rotate-180" />
+                      <h4 className="text-xl md:text-[28px] mb-8 font-light">
                         “{slide.quote}”
                       </h4>
 

@@ -34,6 +34,8 @@ export default function HeroSection() {
 
                         <BubbleButton 
                             type="submit" 
+                            btnType="submit"
+                            // bubbleColor='red'
                             className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] p-3 text-white rounded"
                         >
                             Book a 15‑Minute Call <ArrowRight />

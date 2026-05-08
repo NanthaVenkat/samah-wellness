@@ -193,7 +193,8 @@ export default function Pillars() {
               </div>
 
               <BubbleButton
-                to="#"
+                to="/"
+                btnType="link"
                 className="flex items-center justify-center font-montserrat font-medium py-2 px-4 gap-3 text-white bg-[#8A8341] w-full text-center rounded"
               >
                 Explore what's new <ArrowRight />
