@@ -41,6 +41,31 @@ const tableDatas = [
     samah: true,
     treditionalCare: "Sometimes",
   },
+  {
+    aspect: "Emotional & Mental Wellbeing Integration",
+    samah: true,
+    treditionalCare: "Sometimes",
+  },
+  {
+    aspect: "Community & Shared Healing Spaces",
+    samah: true,
+    treditionalCare: "",
+  },
+  {
+    aspect: "Structured Pathways for Transformation",
+    samah: true,
+    treditionalCare: "",
+  },
+  {
+    aspect: "Lifestyle Integration (beyond sessions)",
+    samah: true,
+    treditionalCare: "",
+  },
+  {
+    aspect: "Mindful, Intentional Experiences",
+    samah: true,
+    treditionalCare: "",
+  },
 ];
 
 const founderSlider = [
