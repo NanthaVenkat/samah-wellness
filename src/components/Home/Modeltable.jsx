@@ -117,7 +117,7 @@ export default function ModelTable() {
             See how Samah compares to traditional wellness centres.
           </p>
 
-          <div class="mt-8 overflow-auto">
+          <div className="mt-8 overflow-auto">
             <table className="model-table relative font-montserrat w-full text-lg font-medium">
               <thead className="z-[2] relative font-albert text-[#1F1D1D]">
                 <tr className="">
@@ -143,7 +143,7 @@ export default function ModelTable() {
       </section>
 
       <section className="py-20 px-4">
-        <div class="container mx-auto">
+        <div className="container mx-auto">
           <Swiper
             modules={[Navigation, EffectFade]}
             navigation={true}
@@ -157,9 +157,9 @@ export default function ModelTable() {
               <SwiperSlide className="w-full">
                 <div
                   key={index}
-                  class="bg-[#D5CFBA] rounded-xl group overflow-hidden"
+                  className="bg-[#D5CFBA] rounded-xl group overflow-hidden"
                 >
-                  <div class="grid lg:grid-cols-2">
+                  <div className="grid lg:grid-cols-2">
                     <div className="p-5 lg:p-18 overflow-hidden">
                       <img
                         src={founderSlide.image}
@@ -167,7 +167,7 @@ export default function ModelTable() {
                         className="rounded-xl w-full h-full max-h-[340px] object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                     </div>
-                    <div class="flex flex-col gap-8 p-5 lg:p-18 font-montserrat">
+                    <div className="flex flex-col gap-8 p-5 lg:p-18 font-montserrat">
                       <div>
                         <h1 className="text-title-xl !text-left text-[#68320A]">
                           From our Founder
@@ -197,8 +197,8 @@ export default function ModelTable() {
       </section>
 
       <section className="py-20 px-4 w-full overflow-hidden">
-        <div class="container mx-auto">
-          <div class="grid lg:grid-cols-2 gap-12">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <p className="flex items-center text-[#3A391B] gap-3 mb-12 font-medium font-montserrat text-2xl">
                 <img

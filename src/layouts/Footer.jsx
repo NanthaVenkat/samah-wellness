@@ -4,8 +4,8 @@ export default function Footer() {
     return (
         <>
             <footer className="bg-[#3A391B] py-12">
-                <div class="container mx-auto">
-                    <div class="flex">
+                <div className="container mx-auto">
+                    <div className="flex">
                         <img src={footerLogo} alt="" className="w-[110px] mx-auto mb-5" />
                     </div>
 
