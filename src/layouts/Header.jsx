@@ -68,7 +68,7 @@ export default function Header() {
         <ul className="hidden xl:flex items-center gap-5 text-[#323C26]">
           <li><Link>About</Link></li>
           <li>
-            <Link className="flex items-center gap-1">
+            <Link to="/offerings" className="flex items-center gap-1">
               Offerings <ChevronDown size={18} />
             </Link>
           </li>
@@ -123,7 +123,7 @@ export default function Header() {
           {/* Menu items */}
           <div className="flex flex-col items-start gap-6 p-6 text-lg text-[#323C26] font-montserrat font-medium">
             <Link onClick={() => setOpen(false)}>About</Link>
-            <Link onClick={() => setOpen(false)} className="flex items-center gap-1">
+            <Link to="/offerings" onClick={() => setOpen(false)} className="flex items-center gap-1">
               Offerings <ChevronDown size={18} />
             </Link>
             <Link onClick={() => setOpen(false)}>Memberships</Link>

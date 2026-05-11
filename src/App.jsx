@@ -1,4 +1,5 @@
 import HomePage from "./pages/HomePage.jsx";
+import OfferingsPage from "./pages/OfferingsPage.jsx";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "../src/layouts/Header.jsx"
 import Footer from "../src/layouts/Footer.jsx"
@@ -35,6 +36,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
+            <Route path="/offerings" element={<OfferingsPage />} />
           </Routes>
           <Footer />
         </div>

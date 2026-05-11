@@ -17,7 +17,7 @@ export default function HeroSection() {
         setLoading(true);
 
         emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(() => { setLoading(false); setMessage('Form Submit successfuly'); form.current.reset() }, (error) => {
-            setLoading(false); setMessage(error); console.log(error.text);
+            setLoading(false); setMessage('Please fill the field'); console.log(error);
         })
     }
 
@@ -47,16 +47,17 @@ export default function HeroSection() {
                         </div>
 
                         <p className="font-medium">If you’re curious whether <b>Samah is right for you,</b> we invite you to begin with a <b>complimentary 15‑minute call.</b></p>
-
-                        <BubbleButton
-                            type="submit"
-                            btnType="submit"
-                            // bubbleColor='red'
-                            className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] py-3 px-4 text-white rounded"
-                        >
-                            {loading ? 'Booking...' : 'Book a 15‑Minute Call'} <ArrowRight />
-                        </BubbleButton>
-                        {message && <p>{message}</p>}
+                        <div className="relative">
+                            <BubbleButton
+                                type="submit"
+                                btnType="submit"
+                                // bubbleColor='red'
+                                className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] py-3 px-4 text-white rounded"
+                            >
+                                {loading ? 'Booking...' : 'Book a 15‑Minute Call'} <ArrowRight />
+                            </BubbleButton>
+                            {message && <p className='absolute left-0 text-orange-700'>{message}</p>}
+                        </div>
                     </form>
                 </div>
             </section >
