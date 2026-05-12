@@ -8,6 +8,8 @@ import WhatIsSamah from "../components/Home/WhatSamah";
 import ModelTable from "../components/Home/Modeltable";
 import { usePageEffects } from "../hooks/usePageEffects";
 
+import HomeHeroBannerImage from "../assets/images/hero_banner.webp"
+
 function HomePage() {
     const container = useRef(null);
     usePageEffects(container);
@@ -15,7 +17,12 @@ function HomePage() {
     return (
         <div ref={container}>
             <div className="reveal" data-delay="0.1">
-                <HeroSection />
+                <HeroSection
+                    bannerImage={HomeHeroBannerImage}
+                    subtitle="Not sure where to begin?"
+                    title="Start with a gentle conversation."
+                    description="Tell us what your body has been experiencing..."
+                />
             </div>
             <div className="reveal" data-delay="0.1">
                 <HomeAbout />

@@ -241,8 +241,8 @@ export default function Pillars() {
                   <div
                     key={pillar.title}
                     className={`absolute inset-0 h-[120%] w-full origin-center bg-cover bg-center transition-all duration-500 ease-out ${activeIndex === index
-                        ? "scale-[1.08] opacity-100"
-                        : "scale-100 opacity-0"
+                      ? "scale-[1.08] opacity-100"
+                      : "scale-100 opacity-0"
                       }`}
                     style={{
                       backgroundImage: `url(${pillar.banner})`,
@@ -264,7 +264,7 @@ export default function Pillars() {
                       type="button"
                       onClick={() => handlePillarSelect(index)}
                       aria-pressed={activeIndex === index}
-                      className="group/item flex w-full cursor-pointer items-start gap-3 py-4 text-left text-[#3A391B] transition-all duration-300"
+                      className="group/item flex w-full cursor-pointer items-center gap-3 py-4 text-left text-[#3A391B] transition-all duration-300"
                     >
                       <img
                         src={pillar.icon}
