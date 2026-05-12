@@ -41,7 +41,7 @@ export default function HomeAbout() {
                     </div>
                 </div>
 
-                <div className="rounded-xl p-7 grid grid-cols-1 lg:grid-cols-[60%_40%] gap-5 mt-5 bg-[#D5CFBA] group overflow-hidden">
+                <div className="rounded-xl p-7 grid grid-cols-1 lg:grid-cols-[60%_40%] gap-y-5 mt-5 bg-[#D5CFBA] group overflow-hidden">
                     <div className="flex flex-col justify-center text-[#3A391B] z-10">
                         <h1 className="font-albertus text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight"><i className="font-roundhand">Introducing Samah Wellness House,</i> <br /> a Communal House for Holistic Well-being.</h1>
 

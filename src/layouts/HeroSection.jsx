@@ -17,7 +17,7 @@ export default function HeroSection() {
         setLoading(true);
 
         emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(() => { setLoading(false); setMessage('Form Submit successfuly'); form.current.reset() }, (error) => {
-            setLoading(false); setMessage('Please fill the field'); console.log(error);
+            setLoading(false); setMessage('Please fill the field'); console.log(error.text);
         })
     }
 

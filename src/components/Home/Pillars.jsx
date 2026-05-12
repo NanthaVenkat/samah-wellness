@@ -298,14 +298,14 @@ export default function Pillars() {
 
         <section className="bg-[#e9e2d3]">
           <div className="flex flex-col md:flex-row">
-            <div className="group relative min-h-[460px] w-full overflow-hidden md:order-2 md:w-1/2">
+            <div className="group relative min-h-[460px] w-full overflow-hidden md:order-2 md:w-1/2 lg:min-h-screen">
               <div
                 className="parallax absolute -top-[10%] left-0 h-[120%] w-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
                 style={{ backgroundImage: `url(${piller2Image})` }}
               />
             </div>
 
-            <div className="mx-auto flex w-full max-w-3xl flex-col justify-center p-5 font-albert sm:p-8 md:w-1/2 lg:h-[80vh] lg:p-18">
+            <div className="mx-auto flex w-full max-w-3xl flex-col justify-center p-5 font-albert sm:p-8 md:w-1/2 lg:p-18">
               <h2 className="mb-6 text-xl text-[#68320A] md:text-4xl">
                 A living house is always evolving.
               </h2>
