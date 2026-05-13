@@ -183,7 +183,7 @@ export default function ModelTable() {
                       <BubbleButton
                         to={founderSlide.link}
                         btnType="link"
-                        className="flex items-center gap-3 text-[clamp(1.3rem,0.98rem+0.2vw,1.125rem)] rounded-full bg-[#68320A] text-white px-5 py-2 w-max mt-auto"
+                        className="flex items-center gap-3 text-[clamp(1.3rem,0.98rem+0.2vw,1.125rem)] rounded-full bg-[#68320A] text-white w-max mt-auto"
                       >
                         Begin Your Journey <ArrowRight width={20} />
                       </BubbleButton>

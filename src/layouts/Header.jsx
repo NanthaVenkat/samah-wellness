@@ -77,13 +77,13 @@ export default function Header() {
         {/* Desktop Right */}
         <ul className="hidden lg:flex items-center gap-5 ml-auto text-[#323C26]">
           <li>
-            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 py-2 px-4 border border-[#3A391B] hover:border-[#fff] rounded-full" bubbleColor="bg-[#8A8341]" textColor="text-[#fff]">
+            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 border border-[#3A391B] hover:border-[#fff] rounded-full" bubbleColor="bg-[#8A8341]" textColor="text-[#fff]">
               <UserRound fill="#3A391B" stroke={0} />
               Log In
             </BubbleButton>
           </li>
           <li>
-            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 bg-[#BF7F81] rounded-full text-white py-2 px-4" bubbleColor="bg-white/30">
+            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 bg-[#BF7F81] rounded-full text-white" bubbleColor="bg-white/30">
               <UserRound fill="#FFFFFF" stroke={0} />
               Book a Consultation
             </BubbleButton>
@@ -129,11 +129,11 @@ export default function Header() {
 
             {/* Buttons */}
             <div className="flex flex-col gap-4 w-full mt-4">
-              <BubbleButton to="#" btnType="link" className="flex justify-center items-center gap-2 py-3 border border-[#3A391B] rounded-full" bubbleColor="bg-[#8A8341]">
+              <BubbleButton to="#" btnType="link" className="flex justify-center items-center gap-2 border border-[#3A391B] rounded-full" bubbleColor="bg-[#8A8341]">
                 <UserRound fill="#3A391B" stroke={0} />
                 Log In
               </BubbleButton>
-              <BubbleButton to="#" btnType="link" className="flex justify-center items-center gap-2 py-3 bg-[#BF7F81] text-white rounded-full" bubbleColor="bg-white/30">
+              <BubbleButton to="#" btnType="link" className="flex justify-center items-center gap-2 bg-[#BF7F81] text-white rounded-full" bubbleColor="bg-white/30">
                 <UserRound fill="#fff" stroke={0} />
                 Book a Consultation
               </BubbleButton>

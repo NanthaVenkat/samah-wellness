@@ -329,7 +329,7 @@ export default function Pillars() {
                 <BubbleButton
                   to="/"
                   btnType="link"
-                  className="flex w-full items-center justify-center gap-3 rounded bg-[#8A8341] px-4 py-3 text-center font-montserrat font-medium text-white"
+                  className="flex w-full items-center justify-center gap-3 rounded bg-[#8A8341] text-center font-montserrat font-medium text-white"
                 >
                   Explore what's new <ArrowRight />
                 </BubbleButton>
@@ -462,7 +462,7 @@ export default function Pillars() {
               <BubbleButton
                 to="/"
                 btnType="link"
-                className="flex items-center justify-center font-montserrat font-medium py-3 px-4 gap-3 text-white bg-[#8A8341] w-full text-center rounded"
+                className="flex items-center justify-center font-montserrat font-medium gap-3 text-white bg-[#8A8341] w-full text-center rounded"
               >
                 Explore what's new <ArrowRight />
               </BubbleButton>

@@ -61,7 +61,7 @@ export default function HeroSection({ bgColor, bannerImage, title, subtitle, des
                                     type="submit"
                                     btnType="submit"
                                     // bubbleColor='red'
-                                    className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] py-3 px-4 text-white rounded"
+                                    className="flex items-center gap-2 justify-center text-center mt-10 w-full bg-[#68320A] text-white rounded"
                                 >
                                     {loading ? 'Booking...' : buttonText} <ArrowRight />
                                 </BubbleButton>

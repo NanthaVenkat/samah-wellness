@@ -13,7 +13,8 @@ export default function BubbleButton({
   btnType = "default",
   as = "button",
   bubbleColor = "bg-white/10",
-  textColor = ""
+  textColor = "",
+  classBeside = 'px-4 py-3'
 }) {
   const buttonRef = useRef(null);
   const bubbleRef = useRef(null);
@@ -102,27 +103,28 @@ export default function BubbleButton({
 
   const cursorClass =
     hasCustomCursor ? "cursor-none" : "cursor-default";
-  const commonClasses = `relative overflow-hidden ${cursorClass} ${className}`;
+  const commonClasses = `relative overflow-visible ${cursorClass} ${className}`;
 
   const content = (
     <>
-      <span
-        ref={bubbleRef}
-        className={`absolute ${bubbleColor} rounded-full pointer-events-none z-0`}
-        style={{
-          width: "0",
-          paddingTop: "0",
-        }}
-      />
-      <span className={`relative z-10 w-full flex items-center justify-center gap-2 hover:${textColor}`}>
-        {children}
+      <span class={`inline-block w-full relative overflow-hidden ${classBeside}`}>
+        <span
+          ref={bubbleRef}
+          className={`absolute ${bubbleColor} rounded-full pointer-events-none z-0`}
+          style={{
+            width: "0",
+            paddingTop: "0",
+          }}
+        />
+        <span className={`relative z-10 w-full flex items-center justify-center gap-2 hover:${textColor}`}>
+          {children}
+        </span>
       </span>
       {hasCustomCursor ? (
         <motion.span
           aria-hidden="true"
-          className={`pointer-events-none absolute z-20 flex h-10 w-10 items-center justify-center rounded-full text-white shadow-xl ${
-            btnType === "submit" ? "bg-[#68320A]" : "bg-[#8A8341]"
-          }`}
+          className={`pointer-events-none absolute z-20 flex h-10 w-10 items-center justify-center rounded-full text-white shadow-xl ${btnType === "submit" ? "bg-[#68320A]" : "bg-[#8A8341]"
+            }`}
           animate={{
             opacity: cursorVisible ? 1 : 0,
             scale: cursorVisible ? 1 : 0.7,
@@ -152,9 +154,9 @@ export default function BubbleButton({
         className={
           className.includes("w-max mt-auto") || className.includes("w-full")
             ? className
-                .split(" ")
-                .filter((c) => c.startsWith("w-"))
-                .join(" ")
+              .split(" ")
+              .filter((c) => c.startsWith("w-"))
+              .join(" ")
             : ""
         }
       >

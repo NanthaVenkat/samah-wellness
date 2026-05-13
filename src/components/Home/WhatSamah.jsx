@@ -40,7 +40,7 @@ export default function WhatIsSamah() {
                             ))}
                         </div>
 
-                        <BubbleButton to='#' btnType='link' className='flex items-center justify-center font-montserrat font-medium py-3 px-4 gap-3 text-white bg-[#68320A] w-full text-center rounded'>
+                        <BubbleButton to='#' btnType='link' className='flex items-center justify-center font-montserrat font-medium gap-3 text-white bg-[#68320A] w-full text-center rounded'>
                             Book a 15‑Minute Call <ArrowRight />
                         </BubbleButton>
 
