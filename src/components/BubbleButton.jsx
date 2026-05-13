@@ -107,7 +107,7 @@ export default function BubbleButton({
 
   const content = (
     <>
-      <span class={`inline-block w-full relative overflow-hidden ${classBeside}`}>
+      <span className={`inline-block w-full relative overflow-hidden ${classBeside}`}>
         <span
           ref={bubbleRef}
           className={`absolute ${bubbleColor} rounded-full pointer-events-none z-0`}
