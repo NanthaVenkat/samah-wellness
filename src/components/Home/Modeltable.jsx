@@ -281,7 +281,7 @@ export default function ModelTable() {
                     key={index}
                     className="reveal-row relative cursor-pointer hover:bg-gray-50 transition-colors duration-300"
                   >
-                    <td className="reveal-box-wrr p-5 min-w-2xs w-2/4 relative">
+                    <td className="reveal-box-wrr p-8 min-w-2xs w-2/4 relative">
                       {tableData.aspect}
                       <div className="reveal-box fixed pointer-events-none z-[9999]">
                         {tableData.revealItem && (
