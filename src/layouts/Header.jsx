@@ -77,7 +77,7 @@ export default function Header() {
         {/* Desktop Right */}
         <ul className="hidden lg:flex items-center gap-5 ml-auto text-[#323C26]">
           <li>
-            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 border border-[#3A391B] hover:border-[#fff] rounded-full" bubbleColor="bg-[#8A8341]" textColor="text-[#fff]">
+            <BubbleButton to="#" btnType="link" className="flex items-center gap-1 border border-[#3A391B] hover:border-[#fff] rounded-full" bubbleColor="bg-[#8A8341]" textColor="text-[#fff]" classBeside="rounded-full px-4 py-3">
               <UserRound fill="#3A391B" stroke={0} />
               Log In
             </BubbleButton>

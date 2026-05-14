@@ -129,79 +129,98 @@ export default function Pillars() {
     window.scrollTo({ top: targetScroll, behavior: "smooth" });
   };
 
+  const waitForImages = async () => {
+    const images = Array.from(document.images);
+
+    await Promise.all(
+      images.map((img) => {
+        if (img.complete) return Promise.resolve();
+
+        return new Promise((resolve) => {
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+      })
+    );
+  };
+
   // Desktop ScrollTrigger animation
   useGSAP(
     () => {
       if (!isDesktop) return;
 
-      // Kill existing trigger if any
-      if (triggerRef.current) {
-        triggerRef.current.kill();
-        triggerRef.current = null;
-      }
+      let trigger;
 
-      const mm = gsap.matchMedia();
+      const initScrollTrigger = async () => {
+        await waitForImages();
 
-      mm.add("(min-width: 1024px)", () => {
-        if (!pinSectionRef.current || !contentRef.current) return;
+        // wait next paint
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            ScrollTrigger.refresh();
 
-        // Wait for images to load
-        setTimeout(() => {
-          const trigger = ScrollTrigger.create({
-            trigger: pinSectionRef.current,
-            start: "top top",
-            end: () => `+=${window.innerHeight * Math.max(pillars.length - 1, 1)}`,
-            pin: contentRef.current,
-            pinSpacing: true,
-            scrub: 0.35,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
+            trigger = ScrollTrigger.create({
+              trigger: pinSectionRef.current,
+              start: "top top",
+              end: () =>
+                `+=${window.innerHeight * Math.max(pillars.length - 1, 1)}`,
 
-            snap: pillars.length > 1
-              ? {
-                snapTo: (value) => {
-                  const steps = pillars.length - 1;
-                  return Math.round(value * steps) / steps;
-                },
-                duration: 0.2,
-                ease: "power1.out",
-              }
-              : false,
+              pin: contentRef.current,
+              pinSpacing: true,
+              scrub: 0.35,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
 
-            onUpdate: (self) => {
-              const nextIndex = Math.min(
-                pillars.length - 1,
-                Math.round(self.progress * (pillars.length - 1))
-              );
-              setScrollProgress(self.progress);
-              setActiveIndex(nextIndex);
-            },
+              snap:
+                pillars.length > 1
+                  ? {
+                    snapTo: (value) => {
+                      const steps = pillars.length - 1;
+                      return Math.round(value * steps) / steps;
+                    },
+                    duration: 0.2,
+                    ease: "power1.out",
+                  }
+                  : false,
+
+              onUpdate: (self) => {
+                const nextIndex = Math.min(
+                  pillars.length - 1,
+                  Math.round(self.progress * (pillars.length - 1))
+                );
+
+                setScrollProgress(self.progress);
+                setActiveIndex(nextIndex);
+              },
+            });
+
+            triggerRef.current = trigger;
+
+            ScrollTrigger.refresh();
           });
+        });
+      };
 
-          triggerRef.current = trigger;
-          ScrollTrigger.refresh();
-        }, 100);
-      });
+      initScrollTrigger();
 
       const handleResize = () => {
-        setTimeout(() => ScrollTrigger.refresh(), 100);
+        ScrollTrigger.refresh();
       };
 
       window.addEventListener("resize", handleResize);
 
       return () => {
-        mm.revert();
         window.removeEventListener("resize", handleResize);
-        if (triggerRef.current) {
-          triggerRef.current.kill();
-          triggerRef.current = null;
+
+        if (trigger) {
+          trigger.kill();
         }
       };
     },
     {
       scope: pinSectionRef,
-      dependencies: [pillars.length, isDesktop],
-      revertOnUpdate: true
+      dependencies: [isDesktop],
+      revertOnUpdate: true,
     }
   );
 
@@ -473,3 +492,4 @@ export default function Pillars() {
     </>
   );
 }
+
