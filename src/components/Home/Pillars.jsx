@@ -231,7 +231,7 @@ export default function Pillars() {
             </p>
           </div>
 
-          <div ref={pinSectionRef} className="mt-12 lg:min-h-[500vh]">
+          <div ref={pinSectionRef} className="mt-12">
             <div
               ref={contentRef}
               className="flex flex-col bg-white md:flex-row lg:h-screen"
