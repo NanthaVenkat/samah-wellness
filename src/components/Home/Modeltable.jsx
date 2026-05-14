@@ -256,8 +256,8 @@ export default function ModelTable() {
   
   return (
     <>
-      <section className="py-20">
-        <div className="container text-center mx-auto px-4">
+      <section className="py-20 ">
+        <div className="container overflow-x-hidden text-center mx-auto px-4">
           <h2 className="text-title text-[#8A8341]">why samah</h2>
           <h1 className="text-title-xl text-[#68320A] max-w-[560px] mx-auto">
             A different model of care
