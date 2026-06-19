@@ -22,7 +22,12 @@ export default function App() {
       effects: true,
     });
 
+    const refreshTimer = window.setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 50);
+
     return () => {
+      window.clearTimeout(refreshTimer);
       smoother.kill();
     };
   }, []);

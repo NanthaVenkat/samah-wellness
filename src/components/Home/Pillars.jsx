@@ -145,8 +145,9 @@ export default function Pillars() {
       mm.add("(min-width: 1024px)", () => {
         if (!pinSectionRef.current || !contentRef.current) return;
 
-        // Wait for images to load
-        setTimeout(() => {
+        const createTrigger = () => {
+          if (!pinSectionRef.current || !contentRef.current) return;
+
           const trigger = ScrollTrigger.create({
             trigger: pinSectionRef.current,
             start: "top top",
@@ -180,7 +181,13 @@ export default function Pillars() {
 
           triggerRef.current = trigger;
           ScrollTrigger.refresh();
-        }, 100);
+        };
+
+        if (gsap.core.globals().ScrollSmoother?.get()) {
+          createTrigger();
+        } else {
+          setTimeout(createTrigger, 100);
+        }
       });
 
       const handleResize = () => {
