@@ -1,4 +1,3 @@
-import HomePage from "./pages/HomePage.jsx";
 import OfferingsPage from "./pages/OfferingsPage.jsx";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "../src/layouts/Header.jsx"
@@ -7,6 +6,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
+import HomePage from "./pages/HomePage.jsx";
+import EventPage from "./pages/EventsPage.jsx";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -40,6 +41,7 @@ export default function App() {
         <div className="pt-[88px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/events" element={<EventPage />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/offerings" element={<OfferingsPage />} />
           </Routes>
