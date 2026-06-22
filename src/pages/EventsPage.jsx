@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import HeroSection from "../layouts/HeroSection";
 import EventAbout from "../components/Events/EventAbout";
+import UpcommingEvents from "../components/Events/UpcommingEvents";
 import Workshop from "../components/Events/Workshop";
 import Social from "../components/Events/Social";
 import { usePageEffects } from "../hooks/usePageEffects";
@@ -20,6 +21,9 @@ function HomePage() {
                     title="Start with a gentle conversation."
                     description="Tell us what your body has been experiencing..."
                 />
+            </div>
+            <div className="reveal" data-delay="0.1">
+                <UpcommingEvents />
             </div>
             <div className="reveal" data-delay="0.1">
                 <Workshop />

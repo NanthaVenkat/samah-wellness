@@ -22,17 +22,21 @@ export default function Workshop() {
             <section className="py-18 bg-[#3A391B]">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
-                    <div class="px-4 xl:px-8 flex flex-column items-center justify-center">
-                        <div className="text-white px-3">
-                            <h1 className="text-title-xl !text-left">Samah Explorations (Workshops)</h1>
+                    <div class="px-4 xl:px-8 flex items-center justify-center">
+                        <div className="flex flex-col h-full lg:py-12 max-w-[600px] text-white px-3">
+                            <h1 className="text-title-xl !text-left">Samah Socials (Mindful Rituals)</h1>
                             <div className='mb-4'>
-                                <p className='font-roundhand text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i>Learn, experience, and deepen your practice.</i></p>
+                                <p className='font-roundhand text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i>Celebrate, connect, and let go—consciously.</i></p>
 
                                 <span className='inline-block w-[270px] h-[2px] bg-white'></span>
                             </div>
                             <p className="font-medium font-montserrat md:text-lg max-w-3xl mx-auto mb-1.5">
-                                Interactive sessions that bring together movement, mind, and lifestyle — helping you explore different dimensions of wellbeing in a hands-on way.
+                                Silent joyful gatherings where mindfulness meets wellness
+                                routines — music, movement, food, and connection, done consciously
                             </p>
+
+                            <p className='font-roundhand mt-auto text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i>A space to be real, light, and fully present.</i></p>
+
                         </div>
                     </div>
 
@@ -46,7 +50,7 @@ export default function Workshop() {
                                 640: { slidesPerView: 2 },
                                 1200: { slidesPerView: 2.5 }
                             }}
-                            className='mt-12 workshop-slider'
+                            className='workshop-slider'
                         >
                             {indulgeSlider.map((item, index) => (
                                 <SwiperSlide key={index}>
@@ -67,8 +71,6 @@ export default function Workshop() {
                         </Swiper>
                     </div>
                 </div>
-
-                <p className='font-roundhand text-[#3A391B] text-center mt-6 text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i>Pause. Breathe. Realign.</i></p>
 
             </section>
         </>

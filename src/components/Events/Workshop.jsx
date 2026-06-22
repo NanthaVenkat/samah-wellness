@@ -147,7 +147,7 @@ export default function Workshop() {
                     <p className='font-roundhand text-[#3A391B] text-center mt-8 text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i>Pause. Breathe. Realign.</i></p>
                 </div>
 
-                <div className="container mx-auto px-4 xl:px-8 mt-12">
+                {/* <div className="container mx-auto px-4 xl:px-8 mt-12">
                     <div className="rounded-xl p-7 grid grid-cols-1 lg:grid-cols-[60%_40%] gap-y-5 mt-5 bg-[#8A8341] group overflow-hidden">
                         <div className="flex flex-col justify-center text-[#fff] z-10">
                             <h1 className="font-albertus text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight">You don’t have to come as a different version of yourself.</h1>
@@ -163,7 +163,7 @@ export default function Workshop() {
                             />
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </>
     );
