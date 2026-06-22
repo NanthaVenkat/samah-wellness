@@ -25,8 +25,20 @@ const indulgeSlider = [
 export default function UpcommingEvents() {
     return (
         <>
-            <section className="py-18 bg-[#3A391B]">
+            <section className="py-18">
                 <div className='container mx-auto px-4 lg:px-0'>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+                        <div className='text-'>
+                            <h5 className='text-title-xl !text-left text-[#68320A]'>Upcoming Events</h5>
+                            <p className='text-[#3A391B] text-2xl font-albertus'>Our Gatherings Samah Circles (Circles)</p>
+                        </div>
+                        <div>
+                            <h4 className='font-roundhand text-5xl font-bold text-[#68320A] mb-6'><i>Spaces to pause, reflect, and be heard.</i></h4>
+                            <p className='text-[#3A391B] text-xl font-montserrat font-medium'>Intimate, guided sharing spaces where conversations move beyond the surface — into awareness, connection, and quiet transformation.</p>
+                        </div>
+                    </div>
+
                     <Swiper
                         modules={[Navigation, EffectCards]}
                         navigation={true}
@@ -72,6 +84,10 @@ export default function UpcommingEvents() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+
+                    <p className='text-[#3A391B] text-center mt-8 text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i className='font-roundhand'>Not about fixing —</i></p>
+
+                    <p className='text-center font-albertus text-2xl'>but about seeing, feeling, and understanding together.</p>
                 </div>
             </section>
         </>

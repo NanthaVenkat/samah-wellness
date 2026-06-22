@@ -50,7 +50,7 @@ export default function HomeAbout() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 mt-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-16">
                     <div className='text-center'>
                         <h5 className='text-title !text-2xl text-[#1F1D1D]'>Join the Samah Collective today</h5>
 

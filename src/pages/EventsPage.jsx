@@ -6,7 +6,7 @@ import Workshop from "../components/Events/Workshop";
 import Social from "../components/Events/Social";
 import { usePageEffects } from "../hooks/usePageEffects";
 
-import HomeHeroBannerImage from "../assets/images/hero_banner.webp"
+import HomeHeroBannerImage from "../assets/images/what-samah.webp"
 
 function HomePage() {
     const container = useRef(null);
