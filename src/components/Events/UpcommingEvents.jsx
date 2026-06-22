@@ -4,7 +4,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/effect-coverflow';
 import BubbleButton from '../BubbleButton';
-import { Calendar, ArrowRight } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import indulgeImage1 from '/src/assets/images/home-1.png'
 import indulgeImage2 from '/src/assets/images/Memberships.png'
 import indulgeImage3 from '/src/assets/images/home-2.png'
@@ -67,7 +67,7 @@ export default function UpcommingEvents() {
                         {indulgeSlider.map((item, index) => (
                             <SwiperSlide key={index}>
                                 {/* Added 'flex' to this div so h-full works on the inner child */}
-                                <div className="min-h-[520px] flex shadow-lg rounded-xl overflow-hidden relative group">
+                                <div className="min-h-[520px] flex rounded-xl overflow-hidden relative group">
                                     <div
                                         className='parallax absolute -top-[10%] left-0 w-full h-[120%] bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105'
                                         style={{ backgroundImage: `url(${item.img})` }}
@@ -78,7 +78,7 @@ export default function UpcommingEvents() {
                                         <h4 className='text-2xl sm:text-3xl font-albert'>{item.title}</h4>
                                         <h4 className='text-xl sm:text-2xl font-albert'>{item.heading}</h4>
                                         <p className='font-medium sm:text-lg'>{item.phara}</p>
-                                        <p className='font-medium'>{item.date}</p>
+                                        <p className='font-medium flex items-center gap-3'><Calendar size={16} />{item.date}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
