@@ -66,12 +66,12 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <ul className="hidden xl:flex items-center gap-5 text-[#323C26]">
-          <li><Link>About</Link></li>
+          <li><Link to="/events">Events</Link></li>
           <li><Link to="/offerings" className="flex items-center gap-1">Offerings</Link></li>
-          <li><Link>Memberships</Link></li>
+          {/* <li><Link>Memberships</Link></li>
           <li><Link>Pathways</Link></li>
           <li><Link>Blog</Link></li>
-          <li><Link>Contact Us</Link></li>
+          <li><Link>Contact Us</Link></li> */}
         </ul>
 
         {/* Desktop Right */}

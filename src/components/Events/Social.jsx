@@ -36,7 +36,6 @@ export default function Workshop() {
                             </p>
 
                             <p className='font-roundhand mt-auto text-[clamp(2.25rem,0.98rem+0.2vw,1.125rem)] leading-tight'><i>A space to be real, light, and fully present.</i></p>
-
                         </div>
                     </div>
 
