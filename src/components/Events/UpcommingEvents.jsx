@@ -12,14 +12,9 @@ import indulgeImage4 from '/src/assets/images/home-4.png'
 import whatSamah2 from "/src/assets/images/holistic.webp";
 
 const indulgeSlider = [
-    { img: indulgeImage1, title: 'Upcoming Tag', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage2, title: 'Upcoming Memberships', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage3, title: 'Upcoming Pathways', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage4, title: 'Upcoming Events', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage1, title: 'Upcoming Tag', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage2, title: 'Upcoming Memberships', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage3, title: 'Upcoming Pathways', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' },
-    { img: indulgeImage4, title: 'Upcoming Events', date: '14 Apr, 2026', heading: 'Goddess Energy Retreat with Spiritual Gangster', phara: 'Movement and Ritual Designed to Empower Your Feminine Spirit', type: 'Retreat' }
+    { img: indulgeImage1, title: 'Bollywood Dance Choreography', date: '25 July 2026 | 11:00 AM – 1:00 PM', heading: 'A high-energy session blending rhythm and movement for joy and expression.', phara: '', type: 'Retreat' },
+    { img: indulgeImage2, title: 'Aerial Yoga', date: '25 July 2026 | 6:00 PM – 7:30 PM', heading: 'Suspended postures that build strength, flexibility, and a playful sense of freedom.', phara: '', type: 'Retreat' },
+    { img: indulgeImage3, title: 'Men’s Circle', date: '26 July 2026 | 5:00 PM – 8:00 PM', heading: 'A guided space for men to gather, share openly, and be heard without judgement.', phara: '', type: 'Retreat' },
 ]
 
 export default function UpcommingEvents() {
