@@ -11,7 +11,7 @@ export default function HomeAbout() {
         <section className="py-20">
             <div className="container mx-auto px-4 xl:px-8">
 
-                <div class="grid lg:grid-cols-2 gap-6 mb-20">
+                <div className="grid lg:grid-cols-2 gap-6 mb-20">
 
                     {/* <div className="rounded-4xl overflow-hidden">
                         <img src={sliderImg} alt="" className="parallax" />

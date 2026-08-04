@@ -30,7 +30,7 @@ export default function HeroSection({ bgColor, bannerImage, title, subtitle, des
                             backgroundImage: `url(${bannerImage})`,
                         }}></div>
                         {children && (
-                            <div class="absolute w-full px-8 bottom-8 text-[clamp(0.75rem,2vw,1.25rem)] font-montserrat text-white text-center left-1/2 -translate-x-1/2">
+                            <div className="absolute w-full px-8 bottom-8 text-[clamp(0.75rem,2vw,1.25rem)] font-montserrat text-white text-center left-1/2 -translate-x-1/2">
                                 {children}
                             </div>
                         )}

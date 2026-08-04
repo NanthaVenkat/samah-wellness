@@ -9,10 +9,10 @@ function Program() {
     return (
         <>
             <section className="py-18">
-                <div class="container mx-auto px-4">
+                <div className="container mx-auto px-4">
 
                     {/* Heading and title */}
-                    <div class="grid lg:grid-cols-2 gap-3 font-albert mb-12">
+                    <div className="grid lg:grid-cols-2 gap-3 font-albert mb-12">
                         <h2 className="text-[clamp(1.65rem,2vw,3rem)] text-[#68320A]">Body & Rejuvenation</h2>
 
                         <div>
@@ -22,7 +22,7 @@ function Program() {
                     </div>
 
                     {/* Program Name Button */}
-                    <div class="flex gap-3 w-max mx-auto overflow-auto text-[#1F1D1D] font-bold font-montserrat px-4 mb-8">
+                    <div className="flex gap-3 w-max mx-auto overflow-auto text-[#1F1D1D] font-bold font-montserrat px-4 mb-8">
                         <button className="border border-[#D5CFBA] bg-white whitespace-nowrap px-5 py-2 rounded-full cursor-pointer">Body</button>
                         <button className="border border-[#D5CFBA] bg-white whitespace-nowrap px-5 py-2 rounded-full cursor-pointer">Rejuvenation</button>
                         <button className="border border-[#D5CFBA] bg-white whitespace-nowrap px-5 py-2 rounded-full cursor-pointer">Ayurvedic Massages</button>
@@ -36,15 +36,15 @@ function Program() {
                         <button className="font-bold uppercase space-x-2 ml-auto cursor-pointer"><CloudDownload className="inline-block" /><span className="underline">Download Body</span></button>
                     </div>
 
-                    <div class="rounded-[20px] bg-white p-5 lg:p-10 text-[#1F1D1D] font-montserrat font-medium text-[clamp(0.85rem,2vw,1.15rem)]">
-                        <div class="lg:w-1/2 mb-8">
+                    <div className="rounded-[20px] bg-white p-5 lg:p-10 text-[#1F1D1D] font-montserrat font-medium text-[clamp(0.85rem,2vw,1.15rem)]">
+                        <div className="lg:w-1/2 mb-8">
                             <h3 className="font-albert font-light text-[clamp(1.45rem,2vw,2rem)] mb-3">Generic yoga</h3>
                             <p className="text-[#3A391B]">Lorem Ipsum to therapeutic touch, this space is about reconnecting with your physical self—not just to heal, but to feel alive again.</p>
                         </div>
 
                         <div className="flex flex-wrap gap-y-8">
-                            <div class="inline-block lg:w-1/2">
-                                <div class="flex flex-wrap gap-y-5">
+                            <div className="inline-block lg:w-1/2">
+                                <div className="flex flex-wrap gap-y-5">
                                     <div className="text-center min-w-[220px] max-w-[250px]">
                                         <div className="bg-[#E7EDED] border border-[#94ABA9] p-3">Group (1 session) offline</div>
                                         <div className="border border-t-0 border-[#94ABA9] p-3">₹ 499</div>
@@ -101,7 +101,7 @@ function Program() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="inline-block lg:w-1/2">
+                            <div className="inline-block lg:w-1/2">
                                 <img src={sliderImg} alt="" className="rounded-xl parallax" />
                             </div>
                         </div>

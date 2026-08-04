@@ -8,6 +8,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import HomePage from "./pages/HomePage.jsx";
 import EventPage from "./pages/EventsPage.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/events" element={<EventPage />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/offerings" element={<OfferingsPage />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           </Routes>
           <Footer />
         </div>

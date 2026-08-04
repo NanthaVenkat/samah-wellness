@@ -19,9 +19,9 @@ export default function Workshop() {
     return (
         <>
             <section className="py-18 bg-[#3A391B]">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
-                    <div class="px-4 xl:px-8 flex items-center justify-center">
+                    <div className="px-4 xl:px-8 flex items-center justify-center">
                         <div className="flex flex-col h-full lg:py-12 max-w-[600px] text-white px-3">
                             <h1 className="text-title-xl !text-left">Samah Circles (Circles)</h1>
                             <div className='mb-4'>
