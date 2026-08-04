@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, EffectCards } from 'swiper/modules'
+import { Autoplay, Navigation, EffectCards } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/effect-cards';
 import BubbleButton from '../BubbleButton';
 import { Calendar } from 'lucide-react'
 import indulgeImage1 from '/src/assets/images/home-1.png'
@@ -12,6 +12,9 @@ import indulgeImage4 from '/src/assets/images/home-4.png'
 import whatSamah2 from "/src/assets/images/holistic.webp";
 
 const indulgeSlider = [
+    { img: indulgeImage1, title: 'Bollywood Dance Choreography', date: '25 July 2026 | 11:00 AM – 1:00 PM', heading: 'A high-energy session blending rhythm and movement for joy and expression.', phara: '', type: 'Retreat' },
+    { img: indulgeImage2, title: 'Aerial Yoga', date: '25 July 2026 | 6:00 PM – 7:30 PM', heading: 'Suspended postures that build strength, flexibility, and a playful sense of freedom.', phara: '', type: 'Retreat' },
+    { img: indulgeImage3, title: 'Men’s Circle', date: '26 July 2026 | 5:00 PM – 8:00 PM', heading: 'A guided space for men to gather, share openly, and be heard without judgement.', phara: '', type: 'Retreat' },
     { img: indulgeImage1, title: 'Bollywood Dance Choreography', date: '25 July 2026 | 11:00 AM – 1:00 PM', heading: 'A high-energy session blending rhythm and movement for joy and expression.', phara: '', type: 'Retreat' },
     { img: indulgeImage2, title: 'Aerial Yoga', date: '25 July 2026 | 6:00 PM – 7:30 PM', heading: 'Suspended postures that build strength, flexibility, and a playful sense of freedom.', phara: '', type: 'Retreat' },
     { img: indulgeImage3, title: 'Men’s Circle', date: '26 July 2026 | 5:00 PM – 8:00 PM', heading: 'A guided space for men to gather, share openly, and be heard without judgement.', phara: '', type: 'Retreat' },
@@ -35,27 +38,33 @@ export default function UpcommingEvents() {
                     </div>
 
                     <Swiper
-                        modules={[Navigation, EffectCards]}
+                        modules={[Autoplay, Navigation, EffectCards]}
                         navigation={true}
                         effect="cards"
                         grabCursor={true}
                         centeredSlides={true}
                         spaceBetween={30}
                         slidesPerView={1.2}
-                        loop='true'
+                        loop={true}
+                        loopedSlides={indulgeSlider.length}
+                        observer={true}
+                        observeParents={true}
+                        speed={800}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        cardsEffect={{
+                            slideShadows: true,
+                        }}
                         breakpoints={{
                             640: {
                                 slidesPerView: 1.5,
-                                coverflowEffect: {
-                                    slideShadows: true,
-                                }
                             },
                             1200: {
                                 slidesPerView: 1.5,
-                                coverflowEffect: {
-                                    slideShadows: true,
-                                }
-                            }
+                            },
                         }}
                         className='workshop-slider'
                     >
@@ -84,7 +93,7 @@ export default function UpcommingEvents() {
 
                     <p className='text-center font-albertus text-2xl'>but about seeing, feeling, and understanding together.</p>
                 </div>
-            </section>
+            </section >
         </>
     );
 }
