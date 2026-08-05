@@ -45,6 +45,7 @@ export default function App() {
             <Route path="/events" element={<EventPage />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/offerings" element={<OfferingsPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           </Routes>
           <Footer />
