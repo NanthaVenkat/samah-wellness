@@ -118,14 +118,11 @@ export default function Header() {
 
           {/* Menu items */}
           <div className="flex flex-col items-start gap-6 p-6 text-lg text-[#323C26] font-montserrat font-medium">
-            <Link onClick={() => setOpen(false)}>About</Link>
-            <Link to="/offerings" onClick={() => setOpen(false)} className="flex items-center gap-1">
-              Offerings <ChevronDown size={18} />
-            </Link>
-            <Link onClick={() => setOpen(false)}>Memberships</Link>
-            <Link onClick={() => setOpen(false)}>Pathways</Link>
+            <li><Link to="/events">Events</Link></li>
+          <li><Link to="/offerings" className="flex items-center gap-1">Offerings</Link></li>
+            {/* <Link onClick={() => setOpen(false)}>Pathways</Link>
             <Link onClick={() => setOpen(false)}>Blog</Link>
-            <Link onClick={() => setOpen(false)}>Contact Us</Link>
+            <Link onClick={() => setOpen(false)}>Contact Us</Link> */}
 
             {/* Buttons */}
             <div className="flex flex-col gap-4 w-full mt-4">
